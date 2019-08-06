@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import gift from '../Images/giftcard.png'
 import amazonGift from '../Images/amazon-gift.jpg'
-import '../Molecules/HomePage.css'
+import './HomePage.css'
 
 class homePage extends Component {
     render() {

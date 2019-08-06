@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './addBalance.css'
-import creditCard from '../Pages/creditCard'
+import creditCard from './creditCard'
 import axios from 'axios';
 
 class addBalance extends Component {
