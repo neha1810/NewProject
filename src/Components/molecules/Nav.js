@@ -4,7 +4,7 @@ import Button from '../atoms/Button'
 import Cookies from 'universal-cookie';
 import { linkClick } from '../Redux/actions/index';
 import { connect } from 'react-redux'
-import {fetchProductData} from '../Redux/actions/index'
+import { fetchProductData } from '../Redux/actions/index'
 
 const cookies = new Cookies();
 
@@ -16,8 +16,7 @@ class Nav extends React.Component {
     }
     linkClicked = event => {
 
-        console.log("in here after clicking nav")
-        console.log(event.target.name)
+
         this.props.addLink(event.target.name)
     }
 
@@ -35,7 +34,7 @@ class Nav extends React.Component {
 
 
 
-                              
+
 
 
                                 <li>
@@ -69,7 +68,7 @@ class Nav extends React.Component {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        // dispatching actions returned by action creators
+
 
         addLink: event => dispatch(fetchProductData(event))
 

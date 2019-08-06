@@ -7,7 +7,7 @@ class Home extends React.Component {
 
 
     render() {
-        console.log("coming")
+    
 
 
         let message;
@@ -20,7 +20,7 @@ class Home extends React.Component {
         }
         else {
             if (!cookies.get('name')) {
-                console.log("yup")
+             
                 message = "";
                 role = ""
             }
@@ -29,7 +29,7 @@ class Home extends React.Component {
                 role = this.props.location.state.role
             }
 
-            //    console.log(cookies.get('name'));
+        
         }
 
         return (

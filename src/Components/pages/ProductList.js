@@ -20,16 +20,16 @@ class ProductList extends React.Component {
         this.setState({
             total: this.state.total + Number(price)
         });
-        console.log(this.state.total);
+     
     }
 
     render() {
 
         var products = <div>Loading</div>
         var component = this
-        console.log(this.props.cartlist)
+     
         if (this.props.cartlist.length > 0) {
-            console.log("in here")
+          
             products = this.props.cartlist.map(product =>
 
                 <Product
@@ -59,7 +59,7 @@ class ProductList extends React.Component {
 
 const mapStateToProps = state => {
     state = state.mycart
-    console.log("hey" + JSON.stringify(state))
+ 
 
     return {
         cartlist: state.cart

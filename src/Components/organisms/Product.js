@@ -11,8 +11,7 @@ class Product extends React.Component {
   }
 
   plus = () => {
-    console.log("yep")
-    console.log(this.state.quantity)
+
     this.setState({
       quantity: this.state.quantity + 1
     });

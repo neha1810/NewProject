@@ -6,7 +6,7 @@ class Total extends React.Component {
     render() {
  
       let total = this.props.total;
-      console.log(typeof(total))
+ 
     let subTotal = (+total);
   
       return (

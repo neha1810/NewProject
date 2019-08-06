@@ -46,13 +46,11 @@ class AddProduct extends React.Component {
                 this.props.giftvendorError=""
             
         }
-        console.log("in handle submit")
+      
         event.preventDefault();
-        console.log("my props")
-        console.log(this.props)
-        console.log(this.props)
+     
         const productAdded = this.props
-        console.log("in handle submit"+productAdded)
+      
         this.props.dispatch(submit(productAdded))
      
     

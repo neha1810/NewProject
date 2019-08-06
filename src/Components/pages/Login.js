@@ -32,7 +32,7 @@ class Login extends React.Component {
 }
   responseGoogleError = (response) => {
     console.log(response);
-    //   if(typeof(response)==WE)
+
 
   }
 
@@ -44,11 +44,11 @@ class Login extends React.Component {
 
 
   handleSubmit = event => {
-    console.log("in submit")
+  
     this.props.dispatch(Valid());
 
 let task=this.props.isvalid
-console.log(task)
+
     if (this.props.isvalid===true) {
       console.log("isvalid")
 

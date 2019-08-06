@@ -26,12 +26,10 @@ class Products extends React.Component {
   }
 
   handlecheck = event => {
-    console.log("in handle check")
-    console.log(event.target.value)
+ 
     this.flag = 0;
     for (let i = 0; i < this.state.arr.length; i++) {
-      console.log("in for ")
-      console.log(this.flag)
+    
       if (event.target.value === this.state.arr[i]) {
         this.flag = 1;
         var array = [...this.state.arr]; // make a separate copy of the array
@@ -45,9 +43,9 @@ class Products extends React.Component {
         }
       }
     }
-    console.log(this.flag)
+ 
     if (this.flag === 0) {
-      console.log("not found")
+  
       this.setState({
         arr: this.state.arr.concat(event.target.value)
       }, function () {
@@ -60,10 +58,10 @@ class Products extends React.Component {
 
   }
   render() {
-console.log("rendering")
+
 
     if (this.props.data === undefined) {
-      console.log("undefined coming")
+     
       return null
     }
     else {
@@ -79,8 +77,7 @@ console.log("rendering")
 
               <h2>Filter</h2>
 
-              {/* Amazon <Input type="radio" name="amazon" value="amazon" onchange={this.handlecheck} checked={this.state.showComponent} />
-              Myntra <Input type="radio" name="Myntra" value="myntra" onchange={this.handlecheck} checked={!this.state.showComponent} /> */}
+           
 
               Amazon <Input type="checkbox" name="amazon" value="amazon" onchange={this.handlecheck} />
               Myntra <Input type="checkbox" name="Myntra" value="myntra" onchange={this.handlecheck} />
@@ -130,7 +127,7 @@ console.log(state.data.dataList)
 
 const mapDispatchToProps = dispatch => {
   return {
-    // dispatching actions returned by action creators
+
 
     
     addFilter:(category,arr) => dispatch(fetchProductData(category,arr)),
