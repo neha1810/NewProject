@@ -1,0 +1,9 @@
+.navbar{
+  position: sticky;
+  top:0;
+  background: whitesmoke;
+  z-index: 1000;
+ }
+ .collapse:not(.show) {
+   display:initial;
+ }
