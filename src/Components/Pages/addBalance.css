@@ -1,0 +1,22 @@
+.a-button-input{
+    /* position: absolute; */
+    background-color: transparent;
+    /* color: transparent; */
+    border: 0;
+    cursor: pointer;
+    /* height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: .01;
+    outline: 0; */
+    /* overflow: visible; */
+    z-index: 20;
+    
+}
+.div{    
+    text-align: center; 
+}
+.amount-div{
+    margin-left: 10%;
+}

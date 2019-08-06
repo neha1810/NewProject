@@ -12,6 +12,8 @@ import Nav from './Components/molecules/Nav'
 
 import ProductList from './Components/pages/ProductList'
 import AddProduct from './Components/pages/AddProduct'
+import FrontPage from './Components/pages/frontPage'
+import AddBalance from './Components/pages/addBalance'
 import './App.css';
 import Cookies from 'universal-cookie';
 
@@ -25,7 +27,8 @@ class App extends React.Component {
       <Router>
         <div className="App">
           {/* <AddProduct/> */}
-
+         <FrontPage/>
+          <AddBalance/>
           <Nav />
 
           <Switch>
