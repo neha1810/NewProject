@@ -1,0 +1,196 @@
+.App {
+    text-align: center;
+  }
+  .social-login-header
+  {
+  
+    width: 375px;
+    height: 50.67px;
+    font:14px Lato,arial,tahoma;
+    background:#16A085;
+    padding:10px;
+   
+  } 
+  .social-login-container
+  {
+    width:350px;
+    height: 381px;
+    font:14px Lato,arial,tahoma;
+   color:#878787;
+    padding:20px 25px
+  }
+  .mylogin
+  {
+    display: block;
+    width: 380px;
+    height: 600px;
+  
+    margin: 0 auto;
+    border-style:solid;
+    border-color:black;
+  
+  }
+  .login-title
+  {
+    width: 340px;
+    height: 34.67px;
+    font:32px Lato;
+   color: #ffffff;
+    padding:0px 0px 0px 40px;
+    margin: 0px;
+    text-align: left
+  }
+  .signin-symbol
+  {
+    width: 340px;
+    height: 34.67px;
+  
+    padding:0px;
+    margin: 0px
+  }
+  .social-login-email,.social-login-password,.social-login-role
+  {
+    width: 350px;
+    height: 89.99px;
+  
+    color:black;
+    text-align:left
+   
+  }
+ 
+  .login-label{
+    display:inline-block;
+    width: 43.13px;
+    height: 16.99px;
+    margin: 0px 0px 5px;
+    padding: 2.8px 8.4px 4.2px 0px;
+   
+  }
+  .input-text-login
+  {
+    width: 325px;
+    height: 30px;
+    margin: 0px 0px 10px;
+    padding: 6px 12px;
+  }
+  .login-button{
+    width: 325px;
+    height: 34.67px;
+    font:14px Lato,arial,tahoma;
+    background:#16A085;
+    padding:10px;
+    color:white;
+    border:none
+  
+  }
+  .signup-button{
+    width: 100px;
+    height: 34.67px;
+    font:14px Lato,arial,tahoma;
+    background:#EEEEEE;
+    padding:10px;
+    color:black;
+    border:none
+  
+  }
+  .link-signup
+  {
+    width: 350px;
+    height: 90px;
+    margin: 20px 0px 0px;
+    font:14px Lato,arial,tahoma;
+    
+  
+  }
+  .social-login-container-signup
+  {
+    width:350px;
+    height: 125px;
+    font:14px Lato,arial,tahoma;
+   color:#878787;
+    padding:20px 25px
+  }
+  .block-title
+  {
+    width:350px;
+    height: 34px;
+    font:14px Lato,arial,tahoma;
+   color:#8787;
+    padding:0px 0px 10px;
+    margin:0px 0px 10px;
+  }
+  .block-content
+  {
+    width:350px;
+    height: 50px;
+    text-align: center;
+  
+  }
+  .link-signup-a
+  {
+    display:inline-block;
+    color:white;
+    background:red;
+    padding: 6px 12px 6px 44px;
+    text-decoration: none;
+    border-radius:5px;
+    width:80px;
+    height:25px;
+  }
+  .all-signups
+  {
+    position:absolute;
+    width: 127px;
+    height: 34px;
+    margin-right: 10px;
+    
+  }
+  .img-google
+  {
+    display:block;
+    position: absolute;
+    width: 32px;
+    height: 37px;
+   
+    
+  
+  }
+  .link-signup p
+  {
+    font-size: 26px;
+    color: #16A085;
+    margin-bottom: 20px;
+  }
+  .gButton
+  {
+    margin-left:40px;
+  }
+  
+  
+  .my-container
+  {
+    border: 1px solid green
+  }
+  .my-row
+  {
+    border: 2px solid blue
+  }
+  .my-col
+  {
+    border: 3px solid red
+  }
+
+
+  
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+  padding-right: 0px; 
+  padding-left: 0px; 
+    /* padding-left: 15px; */
+}
+.error
+{
+  color:red;
+}
