@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import banner from '../Images/banner.jpg'
 import './homePage.css'
 import axios from 'axios'
-import NavBar from '../organisms/NavBar'
+import NavBar from '../Organisms/NavBar'
 import Share from '../Molecules/share'
 
 class homePage extends Component {

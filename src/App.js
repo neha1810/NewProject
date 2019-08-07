@@ -1,22 +1,22 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
 
-import Login from './Components/pages/Login'
+import Login from './Components/Pages/Login'
 
-import Products from './Components/pages/Products'
+import Products from './Components/Pages/Products'
 
 import Home from './Components/Molecules/Home'
 import Checkout from './Components/Molecules/Checkout'
 
 import Nav from './Components/Molecules/Nav'
 
-import ProductList from './Components/pages/ProductList'
-import Header from './Components/organisms/Header'
+import ProductList from './Components/Pages/ProductList'
+import Header from './Components/Organisms/Header'
 import './App.css';
-import Footer from './Components/organisms/Footer'
-// import AddProduct from './Components/pages/AddProduct'
-// import FrontPage from './Components/pages/frontPage'
-// import AddBalance from './Components/pages/addBalance'
+import Footer from './Components/Organisms/Footer'
+// import AddProduct from './Components/Pages/AddProduct'
+// import FrontPage from './Components/Pages/frontPage'
+// import AddBalance from './Components/Pages/addBalance'
 import './App.css';
 import Cookies from 'universal-cookie';
 
@@ -26,13 +26,12 @@ class App extends React.Component {
   render() {
     return (
 
-
       <Router>
         <div className="App">
           {/* <AddProduct/> */}
          {/* <FrontPage/>
           <AddBalance/> */}
-                   <Header/>
+          <Header/>
           <Nav />
 
           <Switch>

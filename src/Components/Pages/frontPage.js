@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import Header from '../organisms/Header'
+import Header from '../Organisms/Header'
 import '../../App.css' 
 import image from '../Images/banner.jpg'
 

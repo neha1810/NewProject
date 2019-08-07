@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCartData } from '../Redux/actions/index'
 import { postCartData } from '../Redux/actions/index'
-import Total from '../organisms/Total'
-import Product from '../organisms/Product'
+import Total from '../Organisms/Total'
+import Product from '../Organisms/Product'
 import '../sheets/ProductList.scss'
 
 

@@ -9,9 +9,9 @@ import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogActions';
-import Button from '../atoms/Button'
-import Input from '../atoms/Input'
-import Label from '../atoms/Label'
+import Button from '../Atoms/Button'
+import Input from '../Atoms/Input'
+import Label from '../Atoms/Label'
 import { loginInput } from '../Redux/actions/index'
 import { loginSubmit } from '../Redux/actions/index';
 import { googleSubmit } from '../Redux/actions/index';

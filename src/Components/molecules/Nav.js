@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Button from '../atoms/Button'
+import Button from '../Atoms/Button'
 import Cookies from 'universal-cookie';
 
 import { connect } from 'react-redux'

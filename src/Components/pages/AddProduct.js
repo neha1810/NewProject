@@ -8,9 +8,9 @@ import DialogContent from '@material-ui/core/DialogActions';
 import { changeinput } from '../Redux/actions/index'
 import { submit } from '../Redux/actions/index'
 import { clear } from '../Redux/actions/index'
-import Button from '../atoms/Button'
-import Input from '../atoms/Input'
-import Label from '../atoms/Label'
+import Button from '../Atoms/Button'
+import Input from '../Atoms/Input'
+import Label from '../Atoms/Label'
 import '../sheets/AdminAdd.scss'
 
 

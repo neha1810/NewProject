@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchProductData } from '../Redux/actions/index'
 import { sortBy } from '../Redux/actions/index'
-import Button from '../atoms/Button'
-import Input from '../atoms/Input'
-import Card from '../atoms/Card'
+import Button from '../Atoms/Button'
+import Input from '../Atoms/Input'
+import Card from '../Atoms/Card'
 import '../sheets/Products.scss'
 
 class Products extends React.Component {
