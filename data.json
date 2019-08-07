@@ -1,0 +1,144 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "first_name": "Sebastian",
+        "last_name": "Eschweiler",
+        "email": "sebastian@codingthesmartway.com",
+        "balance": "5000"
+      },
+      {
+        "id": 2,
+        "first_name": "Steve",
+        "last_name": "Palmer",
+        "email": "steve@codingthesmartway.com",
+        "balance": "1000"
+      },
+      {
+        "id": 3,
+        "first_name": "Ann",
+        "last_name": "Smith",
+        "email": "ann@codingthesmartway.com",
+        "balance": "3000"
+      },
+      {
+        "balance": {
+          "balance": "10000"
+        },
+        "id": 4
+      },
+      {
+        "balance": {
+          "balance": "4567890"
+        },
+        "id": 5
+      },
+      {
+        "balance": {
+          "balance": "1000"
+        },
+        "id": 6
+      }
+    ],
+    "products": [
+      {
+        "id": "g011",
+        "name": "Amazon Rakhi gift card",
+        "description": "Rakhi gift card",
+        "rating": "",
+        "price": "₹800",
+        "vendor": "amazon",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "amazon-gift"
+      },
+      {
+        "id": "g012",
+        "name": "Flipkart Gift card",
+        "description": "Gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "flipkart"
+      },
+      {
+        "id": "g013",
+        "name": "Myntra Gift card",
+        "description": "Gift card",
+        "rating": "",
+        "price": "₹700",
+        "vendor": "myntra",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "Myntra"
+      },
+      {
+        "id": "g014",
+        "name": "Gift card",
+        "description": "gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "commonGift"
+      },
+      {
+        "id": "g015",
+        "name": "Gift card",
+        "description": "gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "commonGift"
+      },
+      {
+        "id": "g016",
+        "name": "Amazon Gift card",
+        "description": " gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "amazon-gift"
+      },
+      {
+        "id": "g017",
+        "name": "Gift card",
+        "description": "gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "commonGift"
+      },
+      {
+        "id": "g018",
+        "name": "Amazon Gift card",
+        "description": " gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "amazon-gift"
+      },
+      {
+        "id": "g019",
+        "name": "Gift card",
+        "description": " gift card",
+        "rating": "",
+        "price": "₹900",
+        "vendor": "flipkart",
+        "category": "ecommerce",
+        "discount": "10",
+        "image": "commonGift"
+      }
+    ]
+  }

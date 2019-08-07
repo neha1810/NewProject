@@ -1,10 +1,17 @@
 footer{
     background: rgb(250, 228, 157);
-    margin: 2%;
+    margin: 1%;
 }
 h5{
     color:white;
+    padding:2%;
 }
 footer li{
     padding:2%;
+}
+#paymentImg{
+    display: contents;
+}
+.footerImg{
+    margin: 5%;
 }

@@ -1,17 +1,15 @@
-import React,{Component} from 'react';
-import FrontPage from './Pages/frontPage'
-import AddBalance from './Pages/addBalance'
+import React from 'react';
+import Header from './Components/Organisms/Header'
+import './App.css';
+import Footer from './Components/Organisms/Footer'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-       <FrontPage/>
-        <AddBalance/>
-      </div>
-    );
-  }
-
+function App() {
+  return (
+    <div className="App">     
+         <Header/>
+         <Footer/>
+    </div>
+  );
 }
 
 export default App;
