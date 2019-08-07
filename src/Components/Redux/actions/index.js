@@ -17,15 +17,6 @@ export const getCheckProduct = (event) => {
         payload: event.target.value
     }
 };
-//clcik category
-// export const linkClick = (event) => {
-//   console.log("heyy")
-//   console.log(event.target)
-//     return {
-//       type:'getCategory',
-//       payload:event.target.name
-//     }
-//   };
 
 export const loginInput = (event) => {
 
@@ -37,13 +28,7 @@ export const loginInput = (event) => {
 
     }
 }
-export const afterDataPost = () => {
 
-    return {
-        type: 'submit'
-
-    }
-};
 export const ValidAdmin = () => {
 
     return {
@@ -59,7 +44,15 @@ export const Valid = () => {
 
     }
 };
+//for admin data added
 
+export const afterDataPost = () => {
+
+    return {
+        type: 'submit'
+
+    }
+};
 export const submit = (productAdded) => {
     console.log("in submit action")
     return (dispatch) => {
@@ -85,7 +78,7 @@ export const googleSubmit = (data) => {
     }
 };
 
-
+//to check whether user present or not
 export const fetchData = (data) => {
     console.log("my data" + JSON.stringify(data))
     return {
@@ -136,7 +129,7 @@ export const clear = () => {
     }
 }
 
-
+//product page data
 export const fetchProduct = (data,event) => {
     console.log("in fetch" + JSON.stringify(data))
     return {
@@ -150,9 +143,7 @@ export const fetchProduct = (data,event) => {
 
 
 export const fetchProductData = (event,arr) => {
-    console.log("getting in action")
-    console.log(event)
-    console.log(arr)
+  
     var params = new URLSearchParams();
     console.log("hey in check")
     if(arr===undefined || arr.length===0)
@@ -167,7 +158,7 @@ export const fetchProductData = (event,arr) => {
     params.append("vendor",arr[1])
     }
 
-    console.log("hey in check")
+    
     var request = {
         params: params
     };
@@ -183,7 +174,7 @@ export const fetchProductData = (event,arr) => {
     };
 };
 
-
+//fetch details in cart according to user data
 export const fetchCart = (data) => {
     console.log("in fetch" + JSON.stringify(data))
     return {
@@ -195,9 +186,26 @@ export const fetchCart = (data) => {
 
 
 
-export const fetchCartData = () => {
+export const fetchCartData = (name) => {
+    var params = new URLSearchParams();
+   
+    if(name===undefined || name==="")
+    {
+       
+        params.append("userId", "");
+       
+    }
+  else{
+    params.append("userId",name);
+
+    }
+
+  
+    var request = {
+        params: params
+    };
     return (dispatch) => {
-        return axios.get(`http://localhost:8089/inCart`)
+        return axios.get(`http://localhost:8089/inCart`,request)
             .then(response => {
                 console.log("in response" + JSON.stringify(response.data))
                 dispatch(fetchCart(response.data))
@@ -208,25 +216,53 @@ export const fetchCartData = () => {
     };
 };
 
-// export const updateQuantity = () => {
 
-//     return {
-//       type:'quantity'
+//give the data according to product page detail button click
+export const detail = (data) => {
+    console.log("in detail" + JSON.stringify(data))
+    return {
+        type: 'detail',
+        data
+    }
+};
 
-//     }
-//   };
-//   export const updateQuantityMinus = () => {
 
-//     return {
-//       type:'quantityMinus'
 
-//     }
-//   };
-//   export const totalSum = (price) => {
 
-//     return {
-//       type:'total',
-//       payload:price
+export const getDetails = (id) => {
+ 
+    return (dispatch) => {
+        return axios.get(`http://localhost:8089/poducts/`+id)
+            .then(response => {
+                console.log("in response" + JSON.stringify(response.data))
+                dispatch(detail(response.data))
+            })
+            .catch(error => {
+                throw (error);
+            });
+    };
+};
 
-//     }
-//   };
+
+//posting from cart
+export const postCart = (data) => {
+    console.log("in fetch" + JSON.stringify(data))
+    return {
+        type: 'postCart',
+        data
+    }
+};
+
+export const postCartData = (data) => {
+ console.log(data)
+    return (dispatch) => {
+        return axios.post(`http://localhost:8089/postCart/`,data)
+            .then(response => {
+                console.log("in response" + JSON.stringify(response.data))
+                dispatch(postCart(response.data))
+            })
+            .catch(error => {
+                throw (error);
+            });
+    };
+};

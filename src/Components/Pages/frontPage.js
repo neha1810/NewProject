@@ -2,9 +2,7 @@ import React,{Component} from 'react';
 import Header from '../organisms/Header'
 import '../../App.css' 
 import image from '../Images/banner.jpg'
-import NavBar from '../organisms/NavBar'
-import homepage from '../molecules/HomePage'
-import Footer from '../organisms/Footer'
+
 
 class frontPage extends Component {
   render() {

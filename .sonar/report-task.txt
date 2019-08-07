@@ -1,0 +1,6 @@
+projectKey=yoyo
+serverUrl=http://localhost:8081
+serverVersion=7.1.0.11001
+dashboardUrl=http://localhost:8081/dashboard/index/yoyo
+ceTaskId=AWxoKVFhjxJvl4WsRPa6
+ceTaskUrl=http://localhost:8081/api/ce/task?id=AWxoKVFhjxJvl4WsRPa6
