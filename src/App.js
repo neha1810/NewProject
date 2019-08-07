@@ -5,12 +5,15 @@ import Login from './Components/pages/Login'
 
 import Products from './Components/pages/Products'
 
-import Home from './Components/molecules/Home'
-import Checkout from './Components/molecules/Checkout'
+import Home from './Components/Molecules/Home'
+import Checkout from './Components/Molecules/Checkout'
 
-import Nav from './Components/molecules/Nav'
+import Nav from './Components/Molecules/Nav'
 
 import ProductList from './Components/pages/ProductList'
+import Header from './Components/organisms/Header'
+import './App.css';
+import Footer from './Components/organisms/Footer'
 // import AddProduct from './Components/pages/AddProduct'
 // import FrontPage from './Components/pages/frontPage'
 // import AddBalance from './Components/pages/addBalance'
@@ -29,6 +32,7 @@ class App extends React.Component {
           {/* <AddProduct/> */}
          {/* <FrontPage/>
           <AddBalance/> */}
+                   <Header/>
           <Nav />
 
           <Switch>
@@ -41,6 +45,8 @@ class App extends React.Component {
             <Route exact path='/checkout' render={() => (cookies.get('name') ? (<Checkout />) : (<Redirect to='/Login' />))}></Route>
 
           </Switch>
+          
+         <Footer/>
         </div>
        </Router>
     );

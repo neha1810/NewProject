@@ -6,7 +6,7 @@ class footer extends Component {
     render() {
         return (
             <footer>
-                <div className="container-fuild">
+                <div className="container-fuild col-xs-12 col-sm-12 col-md-12">
                     <div className="row text-center text-xs-center text-sm-left text-md-left">
                         <div className="col-xs-12 col-sm-4 col-md-4">
                             <h5>INFORMATION</h5>
@@ -30,8 +30,8 @@ class footer extends Component {
                             </ul>
                         </div>                       
                     </div>
-                    <div className="row">
-                        <div className="col-xs-12 col-sm-4 col-md-4">                            
+                    <div className="row footerImg">
+                        <div className="col-xs-12 col-sm-4 col-md-4" id="paymentImg">                            
                              <img id="socialImage" src={payment} alt="Gift Card" />
                         </div>
                     </div>
