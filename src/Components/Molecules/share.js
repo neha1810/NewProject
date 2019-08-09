@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FacebookShareButton, LinkedinShareButton, WhatsappShareButton, TwitterShareButton } from 'react-share';
 import { FacebookIcon, LinkedinIcon, WhatsappIcon, TwitterIcon } from 'react-share'
-import './share.css'
+import './Share.css'
 
 class share extends Component {
     render() {

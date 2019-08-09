@@ -5,11 +5,12 @@ import Login from './Components/Pages/Login'
 
 import Products from './Components/Pages/Products'
 
-import Home from './Components/Molecules/Home'
+// import Home from './Components/Molecules/Home'
+import HomePage from './Components/Pages/homeProducts'
 import Checkout from './Components/Molecules/Checkout'
 
 import Nav from './Components/Molecules/Nav'
-
+import NavBar from './Components/Organisms/NavBar'
 import ProductList from './Components/Pages/ProductList'
 import Header from './Components/Organisms/Header'
 import './App.css';
@@ -32,10 +33,10 @@ class App extends React.Component {
          {/* <FrontPage/>
           <AddBalance/> */}
           <Header/>
-          <Nav />
-
+          {/* <Nav /> */}
+            {/* <NavBar/> */}
           <Switch>
-            <Route exact path='/' component={Home}></Route>
+            <Route exact path='/' component={HomePage}></Route>
             <Route exact path='/Login' component={Login}></Route>
             <Route exact path='/products' component={Products}></Route>
             <Route exact path='/cart' component={ProductList}></Route>

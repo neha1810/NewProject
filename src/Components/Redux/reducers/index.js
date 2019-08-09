@@ -4,12 +4,14 @@ import logindata from './LoginReducer';
 import data from './ProductReducer';
 import mycart from './CartReducer';
 import mydetail from './DetailsReducer';
+import homePageReducer  from './homeProductsReducer'
 export default combineReducers({
  
     addData: addData,
     logindata:logindata,
     data:data,
     mycart:mycart,
-    mydetail:mydetail
+    mydetail:mydetail,
+    homePageReducer:homePageReducer
 
 });

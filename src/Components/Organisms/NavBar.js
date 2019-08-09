@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
+import './NavBar.css'
 
 
 const NavItem = props => {
@@ -22,7 +22,7 @@ const NavItem = props => {
 class navBar extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg ">
+      <nav className="navbar navbar-expand-lg " id="navBar">
         {/* <a className="navbar-brand " href="/"></a> */}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

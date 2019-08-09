@@ -44,6 +44,7 @@
   margin-right: 1%;
   margin-left: 1%;
  }
+ 
  .collapse:not(.show) {
    display:initial;
  }
