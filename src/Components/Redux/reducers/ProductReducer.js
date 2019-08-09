@@ -1,3 +1,5 @@
+
+
 const initialState =
 {
 
@@ -12,7 +14,7 @@ export default function productReducer(state = [], action) {
     switch (action.type) {
 
         case 'gotproduct':
-
+            console.log(action.data)
             state.productList = action.data
 
             state.category = action.event

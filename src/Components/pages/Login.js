@@ -12,39 +12,26 @@ import DialogContent from '@material-ui/core/DialogActions';
 import Button from '../Atoms/Button'
 import Input from '../Atoms/Input'
 import Label from '../Atoms/Label'
-import { loginInput } from '../Redux/actions/index'
-import { loginSubmit } from '../Redux/actions/index';
-import { googleSubmit } from '../Redux/actions/index';
+import {closePopup} from  '../Redux/actions/loginAction'
+import { loginInput } from '../Redux/actions/loginAction'
+import { loginSubmit } from '../Redux/actions/loginAction';
+import { googleSubmit } from '../Redux/actions/loginAction';
 import '../sheets/Login.scss'
 
 const cookies = new Cookies();
 
 class Login extends React.Component {
 
-  state = {
-    usernameError: "",
-    passwordError: "",
-    users: "",
-    open: false
-
-
-  }
 
   responseGoogleError = (response) => {
-    console.log(response);
+   
     //   if(typeof(response)==WE)
     if (response)
       console.log("yyyy")
   }
 
-  handleClose = () => {
-
-
-    this.setState({
-      open: false
-    })
-
-
+  handleClose = (event) => {
+    this.props.dispatch(closePopup(event));
   }
   responseGoogle = (response) => {
 
@@ -52,41 +39,12 @@ class Login extends React.Component {
 
   }
 
-  Valid = () => {
 
-    let usernameError = "";
-    let passwordError = "";
-
-    if (!this.props.username) {
-      usernameError = "Name cannot be empty";
-
-    }
-    if (!this.props.password) {
-      passwordError = "Password cannot be empty";
-
-    }
-    if (usernameError || passwordError) {
-
-      this.setState({ usernameError, passwordError })
-      return false;
-    }
-    return true;
-  }
   handleSubmit = event => {
 
-    const isValid = this.Valid();
-
-    if (isValid) {
-
-      this.setState({
-        usernameError: "", passwordError: ""
-      })
-    }
-    else {
-      this.setState({
-        open: true
-      })
-    }
+ 
+    
+    
 
 
     event.preventDefault();
@@ -121,7 +79,7 @@ class Login extends React.Component {
                   <Label for="username" className="login-label"> <span>Email</span></Label>
 
                   <Input name="username" value={this.props.username} className="input-text-login" onchange={event => this.props.dispatch(loginInput(event))}></Input>
-                  <span className="error">{this.state.usernameError}</span>
+                  <span className="error">{this.props.usernameError}</span>
 
                 </div>
 
@@ -129,13 +87,13 @@ class Login extends React.Component {
                   <Label for="password" className="login-label"> <span>Password</span></Label>
 
                   <Input name="password" type="password" value={this.props.password} className="input-text-login" onchange={event => this.props.dispatch(loginInput(event))}></Input>
-                  <span className="error">{this.state.passwordError}</span>
+                  <span className="error">{this.props.passwordError}</span>
 
                 </div>
                 <div className="social-login-button">
                   <Button value="Login" onClick={this.handleSubmit} className="  login-button" />
                   <Dialog
-                    open={this.state.open}
+                    open={this.props.open}
                     onClose={this.handleClose}
                     aria-labelledby="alert-dialog-title"
                     aria-describedby="alert-dialog-description"
@@ -187,6 +145,7 @@ class Login extends React.Component {
 }
 function mapStatetoProps(state) {
   state = state.logindata
+  console.log(state.pas)
   return {
     username: state.username,
     password: state.password,
@@ -194,6 +153,12 @@ function mapStatetoProps(state) {
     hasUser: state.hasUser,
     google: state.google,
     googleLog: state.googleLog,
+    usernameError:state.usernameError,
+    passwordError:state.passwordError,
+    open:state.open
+  
   }
+
 }
-export default connect(mapStatetoProps)(Login);
+
+export default connect(mapStatetoProps,null)(Login);

@@ -7,9 +7,9 @@ import Products from './Components/Pages/Products'
 
 import Home from './Components/Molecules/Home'
 import Checkout from './Components/Molecules/Checkout'
-
+import Detail from './Components/Pages/Detail'
 import Nav from './Components/Molecules/Nav'
-
+import AddProduct from './Components/Pages/AddProduct'
 import ProductList from './Components/Pages/ProductList'
 import Header from './Components/Organisms/Header'
 import './App.css';
@@ -19,6 +19,9 @@ import Footer from './Components/Organisms/Footer'
 // import AddBalance from './Components/Pages/addBalance'
 import './App.css';
 import Cookies from 'universal-cookie';
+import homePage from './Components/Pages/homePage';
+import History from './Components/Pages/History'
+import categoryEntertainment from './Components/Pages/categoryEntertainment';
 
 const cookies = new Cookies();
 
@@ -31,21 +34,25 @@ class App extends React.Component {
           {/* <AddProduct/> */}
          {/* <FrontPage/>
           <AddBalance/> */}
-          <Header/>
-          <Nav />
-
+          {/* <homePage/>
+         
+          <Header/> */}
           <Switch>
             <Route exact path='/' component={Home}></Route>
             <Route exact path='/Login' component={Login}></Route>
             <Route exact path='/products' component={Products}></Route>
             <Route exact path='/cart' component={ProductList}></Route>
+            <Route exact path='/detail' component={Detail}></Route>
+            <Route exact path='/History' component={History}></Route>
+            <Route exact path='/AddProduct' component={AddProduct}></Route>
+            <Route exact path='/entertainment' component={categoryEntertainment}></Route>
 
 
             <Route exact path='/checkout' render={() => (cookies.get('name') ? (<Checkout />) : (<Redirect to='/Login' />))}></Route>
 
           </Switch>
           
-         <Footer/>
+        
         </div>
        </Router>
     );

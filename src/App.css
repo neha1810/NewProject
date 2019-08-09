@@ -47,3 +47,8 @@
  .collapse:not(.show) {
    display:initial;
  }
+ .myNav
+{
+   
+    padding:5px;
+}

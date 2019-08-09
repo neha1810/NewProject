@@ -11,6 +11,10 @@ const initialState =
     hasUser: false,
     google: "",
     googleLog: false,
+    passwordError:"",
+    usernameError:"",
+    open:false
+
 }
 
 const LoginReducer = (state = initialState, action) => {
@@ -21,12 +25,26 @@ const LoginReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case 'loginType':
-
+            state.usernameError=""
+            state.passwordError=""
             return { ...state, [action.name]: action.value }
 
 
         case 'loginSubmit':
+            console.log("in login submit")
+            if (!state.username) {
+                state.usernameError = "Name cannot be empty";
+                state.open=true
+            }
+            else
+            state.usernameError=""
 
+            if (!state.password) {
+                state.passwordError = "Password cannot be empty";
+                state.open=true
+            }
+            else
+            state.passwordError=""
 
 
             for (var i = 0; i < action.data.length; i++) {
@@ -35,8 +53,8 @@ const LoginReducer = (state = initialState, action) => {
                     state.isLoggedIn = true
                     state.hasUser = true
 
-                    cookies.set('name', state.username, { path: '/', maxAge: 10 });
-                    cookies.set('role', action.data[i].role, { path: '/', maxAge: 10 });
+                    cookies.set('name', state.username, { path: '/', maxAge: 100 });
+                    cookies.set('role', action.data[i].role, { path: '/', maxAge: 100 });
 
                 }
                 else {
@@ -47,9 +65,12 @@ const LoginReducer = (state = initialState, action) => {
             }
 
 
-            state.password = ""
+            state.password=""
+            state.username=""
+           
+            console.log(state.usernameError)
 
-            return initialState
+            return {...state}
 
         case 'googleSubmit':
             state.google = action.data;
@@ -58,6 +79,9 @@ const LoginReducer = (state = initialState, action) => {
             cookies.set('name', state.google.profileObj.name, { path: '/', maxAge: 60 });
 
 
+            return { ...state }
+        case 'closePopup':
+            state.open=false
             return { ...state }
 
         default: return state

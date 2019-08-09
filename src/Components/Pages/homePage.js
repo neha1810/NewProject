@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import banner from '../Images/banner.jpg'
 import './homePage.css'
 import axios from 'axios'
-import NavBar from '../Organisms/NavBar'
+import Header from '../Organisms/Header'
 import Share from '../Molecules/share'
 
 class homePage extends Component {
@@ -27,7 +27,7 @@ class homePage extends Component {
                 <div className="banner ">
                     <img className="col-xs-12 col-sm-8 col-md-8" id="banner" src={banner} alt="HPD_Friendshipday_1" />
                 </div>
-                <NavBar/>
+                <Header/>
                 <div>
                     {this.state.item.map(item =>
                         <div className="col-xs-12 col-sm-4 col-md-4 div" key={item.id}>

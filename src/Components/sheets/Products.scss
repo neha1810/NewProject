@@ -1,12 +1,20 @@
 .card-img-top
 {
-    width:25px;
-    height:150px
+    // width:25px;
+    height:100%;
 }
 .card-image
 {
     padding: 5px;
+    height: 200px;
 }
 .card{
-margin:10px
+margin:10px;
+height: auto;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    height: 220px;
+    float: left;
 }
