@@ -5,12 +5,10 @@ import { sortBy } from '../Redux/actions/productAction'
 import Button from '../Atoms/Button'
 import Input from '../Atoms/Input'
 import Category from '../Organisms/displayCategory'
-import Card from '../Atoms/Card'
-import Header from '../Organisms/Header'
 import '../sheets/Products.scss'
+import Header from '../Organisms/Header'
 
-
-class Products extends React.Component {
+class categoryEntertainment extends React.Component {
 
   constructor(props) {
     super(props);
@@ -75,28 +73,16 @@ class Products extends React.Component {
             <div className="col-md-3 col-sm-3 col-xs-12 col-lg-3 pt-5">
 
               <h2> <span className="prodFont">Filter</span></h2>
-              <span className="prodFont">Amazon</span> <Input type="checkbox" name="amazon" value="amazon" onchange={this.handlecheck} />
-              <span className="prodFont">Myntra</span> <Input type="checkbox" name="Myntra" value="myntra" onchange={this.handlecheck} />
+              <span className="prodFont">BookmyShow</span> <Input type="checkbox" name="BookmyShow" value="BookmyShow" onchange={this.handlecheck} />
+              <span className="prodFont">Saavn</span> <Input type="checkbox" name="Saavn" value="Saavn" onchange={this.handlecheck} />
               <div>
               <span className="prodFont">Sort by price:</span>
               <Button className="prodButton" onClick={this.sorting} value="Sort"></Button>
               </div>
             </div>
-            <Category/>
-          
-            {/* <div className=" col-md-3 col-sm-3 col-xs-12 col-lg-3 pt-5">
-            <Card productId={this.props.data[0].id} name={this.props.data[0].name} src={this.props.data[0].image} description={this.props.data[0].description} price={this.props.data[0].price} />
-            <Card productId={this.props.data[3].id} name={this.props.data[3].name} src={this.props.data[3].image} description={this.props.data[3].description} price={this.props.data[3].price} />
-          </div>
-          <div className="col-md-3 col-sm-3 col-xs-12 col-lg-3 pt-5">
-            <Card productId={this.props.data[1].id} name={this.props.data[1].name} src={this.props.data[1].image} description={this.props.data[1].description} price={this.props.data[1].price} />
-            <Card productId={this.props.data[4].id} name={this.props.data[4].name} src={this.props.data[4].image} description={this.props.data[4].description} price={this.props.data[4].price} />
-          </div>
 
-          <div className=" col-md-3 col-sm-3 col-xs-12 col-lg-3 pt-5">
-            <Card productId={this.props.data[2].id} name={this.props.data[2].name} src={this.props.data[2].image} description={this.props.data[2].description} price={this.props.data[2].price} />
-            <Card productId={this.props.data[5].id} name={this.props.data[5].name} src={this.props.data[5].image} description={this.props.data[5].description} price={this.props.data[5].price} />
-            </div> */}
+          
+<Category/>
     
 
            
@@ -126,4 +112,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Products);
+)(categoryEntertainment);

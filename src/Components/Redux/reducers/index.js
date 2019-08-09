@@ -5,6 +5,7 @@ import data from './ProductReducer';
 import mycart from './CartReducer';
 import mydetail from './DetailsReducer';
 import homePageReducer  from './homeProductsReducer'
+import history from './HistoryReducer';
 export default combineReducers({
  
     addData: addData,
@@ -12,6 +13,7 @@ export default combineReducers({
     data:data,
     mycart:mycart,
     mydetail:mydetail,
-    homePageReducer:homePageReducer
+    homePageReducer:homePageReducer,
+    history:history
 
 });

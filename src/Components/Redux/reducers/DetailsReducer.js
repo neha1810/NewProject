@@ -1,8 +1,12 @@
+import Cookies from "universal-cookie";
 
+
+const cookies = new Cookies();
 
 const initialState =
 {
     dataDetail: "",
+    userId:""
  
 }
 
@@ -15,6 +19,12 @@ const DetailsReducer = (state, action) => {
 
         case 'detail':
             state.dataDetail = action.data
+            if (cookies.get('name')) {
+                state.dataDetail.userId=cookies.get('name')
+            }
+            else
+            state.dataDetail.userId=""
+            
             console.log(" detail reducer")
             console.log(state.dataDetail)
             return { ...state }

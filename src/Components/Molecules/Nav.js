@@ -4,7 +4,7 @@ import Button from '../Atoms/Button'
 import Cookies from 'universal-cookie';
 
 import { connect } from 'react-redux'
-import { fetchProductData } from '../Redux/actions/index'
+import { fetchProductData } from '../Redux/actions/productAction'
 import '../sheets/NavTemp.scss' 
 
 const cookies = new Cookies();

@@ -9,7 +9,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import cart from '../Images/cart.png'
 import TextField from '@material-ui/core/TextField';
 import NavBar from '../Organisms/NavBar'
-
+import Button from '../Atoms/Button'
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 class NavDropdown extends Component {
     constructor(props) {
         super(props);
@@ -17,6 +19,7 @@ class NavDropdown extends Component {
             isToggleOn: false
         };
     }
+   
     showDropdown(e) {
         e.preventDefault();
         this.setState(prevState => ({
@@ -41,26 +44,31 @@ class NavDropdown extends Component {
 }
 
 class Header extends Component {
+    clean = () => {
+        cookies.remove('name', { path: '/' })
+        cookies.remove('role', { path: '/' })
+    }
     render() {
         return (
             <div>
-                
                 <div className="topDiv col-xs-8 col-sm-5 col-md-0">
                     <div className="signIn-header collapse navbar-collapse " id="navbarSupportedContent">
                         <NavDropdown name="Hello, SignIN" id="dropDown">
-                            <a className="dropdown-item" href="/home">SignIN</a>
-                            <a className="dropdown-item" href="/">Register</a>
-                            {/* <a className="dropdown-item" href="/">Create Account</a> */}
-                            {/* <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="/">SignIN</a> */}
+                            {/* <a className="dropdown-item" href="/home">My Account</a>
+                            <a className="dropdown-item" href="/">My Orders</a> */}
+                            <a className="dropdown-item" href="/">Create Account</a>
+                            <Link to="/Login">SignIN</Link>
+                            <Link to="/"><Button value="Logout" onClick={this.clean} /></Link>
+                        
                         </NavDropdown>
 
-                        <a href="/" className="cartImage"><img src={cart} alt="cart" /></a>
+                      
+                       <Link to="/Cart"><img src={cart} alt="cart" /></Link>
                     </div>
                 </div>
+             
 
-
-                <Router>
+               
                     <div>
                         <nav className="header col-xs-8 col-sm-6 col-md-12">
                             <h1>Yoyo App</h1>
@@ -69,16 +77,19 @@ class Header extends Component {
                             </div>
                             <div className="search-option-div">
                             </div>
+                        
                             <Link className="link" to="/">Home</Link>
                             <Link className="link" to="/contact">Contact</Link>
                         </nav>
                         <br/>
-                        <NavBar />
-                        {/* <Route default path="/" component={homeProducts} /> */}
-                        {/* <Route exact path="/contact" component={contact} /> */}
+                        <NavBar/>
+                        {/* <Route default path="/homePage" component={homePage} />
+                        <Route exact path="/contact" component={contact} /> */}
+                       
+
+
                     </div>
-                </Router>
-                
+              
             </div>
         );
     }
