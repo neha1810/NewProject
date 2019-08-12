@@ -1,12 +1,12 @@
-/* .navBar{
+.navBar{
     position: sticky;
     top:0;
     background: whitesmoke;
     z-index: 1000;
     margin-right: 1%;
     margin-left: 1%;
-   } */
-   /* .navBar
+   }
+/* .navBar
    {
     position: fixed;
     width: 100%;

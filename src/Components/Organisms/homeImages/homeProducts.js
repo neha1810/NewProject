@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import banner from '../../../Components/Images/banner.jpg'
 
-
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {posthomePageData} from '../../Redux/actions/homeProductsActions'
 import './homeProducts.css'
+import Button from '../../Atoms/Button'
+import Category from '../displayCategory'
 
 class HomeProducts extends Component {
    
@@ -24,8 +26,9 @@ class HomeProducts extends Component {
                             </div>
                             <div className="details">
                                 <h2>{item.name}</h2>
-                                <h3>{item.description}</h3>
                                 <h3 className="price"> {item.price}</h3>
+        
+                                <Link to="/detail"><Button value="Go To Details"></Button></Link>
                             </div>
                         </div>
                     )}

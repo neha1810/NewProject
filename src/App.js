@@ -15,6 +15,7 @@ import history from './Components/Organisms/history'
 import CategoryTravel from './Components/Pages/categories/categoryTravel'
 import CategoryHealth from './Components/Pages/categories/categoryHealth'
 import CategoryFood from './Components/Pages/categories/categoryFood'
+import AddBalance from './Components/Pages/addBalance/addBalance'
 import './App.css';
 
 
@@ -41,7 +42,7 @@ class App extends React.Component {
             <Route  path='/travel' component={CategoryTravel}></Route>
             <Route  path='/Health' component={CategoryHealth}></Route>
             <Route  path='/Food' component={CategoryFood}></Route>
-
+            <Route path="/addBalance" component={AddBalance}></Route>
             <Route  path='/checkout' render={() => (cookies.get('name') ? (<Checkout />) : (<Redirect to='/Login' />))}></Route>
 
           </Switch>

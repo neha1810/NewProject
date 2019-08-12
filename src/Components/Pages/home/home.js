@@ -1,10 +1,11 @@
 import React from 'react'
 import Cookies from 'universal-cookie';
-import { Link } from 'react-router-dom'
+import {Route, Link } from 'react-router-dom'
 import Header from '../../Organisms/header/header'
 import HomeProducts from '../../Organisms/homeImages/homeProducts'
 import Footer from '../../Organisms/footer/footer'
 import Share from '../../Molecules/share/share'
+
 
 const cookies = new Cookies();
 class Home extends React.Component {
@@ -46,9 +47,9 @@ class Home extends React.Component {
                 <p>{message}</p>
                 <Link to="/AddProduct"><p>{role}</p></Link>
                 <HomeProducts />
-                <Share/>
-      
+                <Share/>               
                 <Footer />
+
             </div>
         )
     }
