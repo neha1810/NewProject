@@ -66,8 +66,6 @@ class navBar extends React.Component {
             <NavItem path="/page3" name="Food and beverages"  /> */}
 
             <Link to="/History" name="history" onClick={this.linkHistoryClicked} className="myNav" >History</Link>
-            <Link to="/"  className="myNav">Home</Link>
-            <Link to="/addBalance" className="myNav" id="addBalance">AddBalance!</Link>
            
             {/* <Link to="/register" name="register" onClick={this.linkRegisterClicked} className="myNav" >Register</Link> */}
           </ul>

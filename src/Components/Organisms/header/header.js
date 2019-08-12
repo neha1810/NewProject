@@ -26,7 +26,7 @@ class Header extends Component {
 
                         <NavDropdown name="Hello, SignIN" id="dropDown">
 
-                            <Link to="/register" name="register" onClick={this.linkRegisterClicked} ><p>CreateAccount</p></Link>
+                            <Link to="/register" name="register" onClick={this.linkRegisterClicked} ><p className="paraE">CreateAccount</p></Link>
                             <Link to="/Login"><span>SignIn</span></Link>
                             <Link to="/" onClick={this.clean}><span>LogOut</span></Link>
                             <Link to="/addBalance" className="myNav" id="addBalance"><p>AddBalance!</p></Link>
@@ -46,10 +46,9 @@ class Header extends Component {
                         <h1>Yoyo App</h1>
                         <div className="search">
                             <TextField type="text" placeholder="Search.." className="search" />
-                        </div>
-                        <div className="search-option-div">
-                        </div>
 
+                            <Link to="/"  className="myNav">Home</Link>           
+                        </div>                      
 
                     </nav>
 

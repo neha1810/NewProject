@@ -16,9 +16,8 @@ export const gethomePageData = (data) =>{
 export const posthomePageData = () => {
    
     return (dispatch) => {
-        return axios.get(`http://localhost:8089/products`)
+        return axios.get(`http://localhost:8089/products/`)
             .then(response => {
-             
                 dispatch(gethomePageData(response.data))
             })
             .catch(error => {
@@ -27,4 +26,17 @@ export const posthomePageData = () => {
     };
 };
 
+// export const getDetails = (id) => {
+ 
+//     return (dispatch) => {
+//         return axios.get(`http://localhost:8089/products/`+id)
+//             .then(response => {
+//                 console.log(id,"ProductID")
+//                 dispatch(gethomePageData(response.data))
+//             })
+//             .catch(error => {
+//                 throw (error);
+//             });
+//     };
+// };
 

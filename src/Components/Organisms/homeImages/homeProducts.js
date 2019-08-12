@@ -7,9 +7,15 @@ import {posthomePageData} from '../../Redux/actions/homeProductsActions'
 import './homeProducts.css'
 import Button from '../../Atoms/Button'
 import Category from '../displayCategory'
+import {getDetails} from '../../Redux/actions/homeProductsActions'
 
 class HomeProducts extends Component {
-   
+    
+    // handleGoToDetails = (id) => {
+    //     console.log(id)
+    //     this.props.dispatch(getDetails(id));
+    
+    //   }
 
     render() {
         return (
@@ -28,7 +34,7 @@ class HomeProducts extends Component {
                                 <h2>{item.name}</h2>
                                 <h3 className="price"> {item.price}</h3>
         
-                                <Link to="/detail"><Button value="Go To Details"></Button></Link>
+                                <Link to="/detail"><Button className="btn btn-primary" value="Go to Details" onClick={this.handleGoToDetails(item.id)} /></Link>
                             </div>
                         </div>
                     )}
@@ -49,8 +55,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         // dispatching actions returned by action creators
-        posthomePageData: dispatch(posthomePageData())
-     
+        posthomePageData: dispatch(posthomePageData())    
 
 
     }
