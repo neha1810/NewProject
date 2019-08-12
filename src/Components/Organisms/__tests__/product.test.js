@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow } from 'enzyme';
-import Product from '../product';
+import Product from '../Product';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { createStore, applyMiddleware } from 'redux';

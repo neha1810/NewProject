@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { fetchCartData } from '../../Redux/actions/cartAction'
 import { postCartData } from '../../Redux/actions/cartAction'
 import Total from '../../Organisms/total'
-import Product from '../../Organisms/product'
+import Product from '../../Organisms/Product'
 import Header from '../../Organisms/header/header'
 import './cartList.scss'
 
