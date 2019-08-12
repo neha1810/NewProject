@@ -11,7 +11,7 @@ const HistoryReducer = (state, action) => {
 
     switch (action.type) {
 
-        case 'history':
+        case 'HISTORY':
             state.historyList=action.data
             return { ...state }
         default: return state

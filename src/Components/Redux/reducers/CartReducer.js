@@ -13,7 +13,7 @@ const CartReducer = (state, action) => {
 
     switch (action.type) {
 
-        case 'gotCart':
+        case 'GOT_CART':
             state.cart = action.data
             return { ...state }
         default: return state

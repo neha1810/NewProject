@@ -3,7 +3,7 @@ export const changeinput = (event) => {
 
 
     return {
-        type: 'inputType',
+        type: 'INPUT_TYPE',
         name: event.target.name,
         value: event.target.value
 
@@ -16,12 +16,12 @@ export const changeinput = (event) => {
 export const afterDataPost = () => {
 
     return {
-        type: 'submit'
+        type: 'SUBMIT'
 
     }
 };
 export const submit = (productAdded) => {
-    console.log("in submit action")
+
     return (dispatch) => {
         return axios.post(`http://localhost:8089/poducts`, productAdded)
             .then(response => {
@@ -46,9 +46,9 @@ export const submit = (productAdded) => {
 export const closePopupAdmin = () => {
    
 
-    console.log("i am in sort")
+   
         return {
-            type: 'closePopupAdmin',
+            type: 'CLOSE_POPUP_ADMIN',
         
     
     
@@ -63,7 +63,7 @@ export const clear = () => {
 
 
     return {
-        type: 'clear',
+        type: 'CLEAR',
 
 
     }

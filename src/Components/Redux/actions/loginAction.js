@@ -1,12 +1,12 @@
 import axios from 'axios';
-
+//for login
 //close pop
 export const closePopup = () => {
    
 
-    console.log("i am in sort")
+
         return {
-            type: 'closePopup',
+            type: 'CLOSE_POPUP',
         
     
     
@@ -18,7 +18,7 @@ export const closePopup = () => {
 
 
         return {
-            type: 'loginType',
+            type: 'LOGIN_TYPE',
             name: event.target.name,
             value: event.target.value
     
@@ -28,9 +28,9 @@ export const closePopup = () => {
     
 //to check whether user present or not
 export const fetchData = (data) => {
-    console.log("my data" + JSON.stringify(data))
+
     return {
-        type: 'loginSubmit',
+        type: 'LOGIN_SUBMIT',
         data
 
     }
@@ -40,7 +40,7 @@ export const loginSubmit = () => {
     return (dispatch) => {
         return axios.get(`http://localhost:8089/users`)
             .then(response => {
-                console.log("myresponse" + JSON.stringify(response.data))
+           
                 dispatch(fetchData(response.data))
             })
             .catch(error => {
@@ -51,9 +51,9 @@ export const loginSubmit = () => {
 
 
 export const googleSubmit = (data) => {
-    console.log("my data" + JSON.stringify(data))
+
     return {
-        type: 'googleSubmit',
+        type: 'GOOGLE_SUBMIT',
         data
 
     }

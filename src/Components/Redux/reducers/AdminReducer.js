@@ -22,14 +22,14 @@ const AdminReducer = (state, action) => {
 
     switch (action.type) {
 
-        case 'inputType':
+        case 'INPUT_TYPE':
 
             return { ...state, [action.name]: action.value }
 
-        case 'clear':
+        case 'CLEAR':
             return initialState
 
-        case 'submit':
+        case 'SUBMIT':
 
             if (!state.giftPrice) {
                 state.giftpriceError = "Gift price can't be empty"
@@ -82,7 +82,7 @@ const AdminReducer = (state, action) => {
 
 
             return {...state}
-            case 'closePopupAdmin':
+            case 'CLOSE_POPUP_ADMIN':
                     state.open=false
                     return { ...state }
         

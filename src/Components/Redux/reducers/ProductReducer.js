@@ -1,5 +1,4 @@
 
-
 const initialState =
 {
 
@@ -13,15 +12,15 @@ const initialState =
 export default function productReducer(state = [], action) {
     switch (action.type) {
 
-        case 'gotproduct':
-            console.log(action.data)
+        case 'GOT_PRODUCT':
+            console.log(initialState)
             state.productList = action.data
 
             state.category = action.event
 
             state.dataList = state.productList
             return { ...state };
-        case 'sort':
+        case 'SORT':
 
             state.dataList = state.dataList.slice(0).sort((a, b) => Number(a.price) - Number(b.price))
 

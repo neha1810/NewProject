@@ -24,14 +24,14 @@ const LoginReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
-        case 'loginType':
+        case 'LOGIN_TYPE':
             state.usernameError=""
             state.passwordError=""
             return { ...state, [action.name]: action.value }
 
 
-        case 'loginSubmit':
-            console.log("in login submit")
+        case 'LOGIN_SUBMIT':
+   
             if (!state.username) {
                 state.usernameError = "Name cannot be empty";
                 state.open=true
@@ -72,7 +72,7 @@ const LoginReducer = (state = initialState, action) => {
 
             return {...state}
 
-        case 'googleSubmit':
+        case 'GOOGLE_SUBMIT':
             state.google = action.data;
 
             state.googleLog = true
@@ -80,7 +80,7 @@ const LoginReducer = (state = initialState, action) => {
 
 
             return { ...state }
-        case 'closePopup':
+        case 'CLOSE_POPUP':
             state.open=false
             return { ...state }
 

@@ -1,0 +1,49 @@
+$theme-color: #16A085;
+#admin{
+  height: 100vh;
+ 
+.myadminContainer
+{
+  padding: 5px;
+  margin-top:10px;
+  height: 100vh;
+  width: 100vh;
+}
+#add
+{
+  color: $theme-color;
+  font-family: "Times New Roman", Times, serif;
+}
+.admin-div
+{
+  padding-top:100px;
+  text-align: center
+}
+
+
+.admin-button
+{
+ background:$theme-color;
+ border:none;
+ color:white;
+ margin-top:10px
+}
+.text-admin
+{
+  width:150px;
+  padding-right:50px
+}
+.input-text-admin
+{
+  margin-left:10px
+}
+.adminA{
+  padding: 0px;
+
+}
+
+.error
+{
+  color:red;
+}
+}

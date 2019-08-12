@@ -17,7 +17,7 @@ const DetailsReducer = (state, action) => {
 
     switch (action.type) {
 
-        case 'detail':
+        case 'DETAIL':
             state.dataDetail = action.data
             if (cookies.get('name')) {
                 state.dataDetail.userId=cookies.get('name')

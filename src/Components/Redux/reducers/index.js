@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
-import addData from './AdminReducer';
-import logindata from './LoginReducer';
-import data from './ProductReducer';
-import mycart from './CartReducer';
-import mydetail from './DetailsReducer';
+import addData from './adminReducer';
+import logindata from './loginReducer';
+import addToCart from './addToCartReducer';
+import registerdata  from './registerReducer';
+import data from './productReducer';
+import mycart from './cartReducer';
+import mydetail from './detailsReducer';
 import homePageReducer  from './homeProductsReducer'
-import history from './HistoryReducer';
+import history from './historyReducer';
 export default combineReducers({
  
     addData: addData,
@@ -14,6 +16,9 @@ export default combineReducers({
     mycart:mycart,
     mydetail:mydetail,
     homePageReducer:homePageReducer,
-    history:history
+    history:history,
+    registerdata:registerdata,
+    addToCart:addToCart
+
 
 });

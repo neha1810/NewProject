@@ -8,13 +8,11 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux'
 import rootReducer from './Components/Redux/reducers'
-import  AdminReducer from './Components/Redux/reducers/AdminReducer'
-import  LoginReducer from './Components/Redux/reducers/LoginReducer'
-import posthomePageData from './Components/Redux/actions/homeProductsActions'
+
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 // store.dispatch(fetchProductData());
-store.dispatch(posthomePageData());
+
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

@@ -3,11 +3,11 @@ import Cookies from 'universal-cookie';
 
 
 
-
+//history according things added in cart
     export const historyData = (data) => {
-        console.log("my history data" + JSON.stringify(data))
+       
         return {
-            type: 'history',
+            type: 'HISTORY',
             data
     
         }
@@ -15,7 +15,7 @@ import Cookies from 'universal-cookie';
     
     export const historyDetails = () => {
         
-        console.log("in submit after putting in add to cart action")
+    
       
         const cookies = new Cookies();
         var user=""
@@ -23,12 +23,12 @@ import Cookies from 'universal-cookie';
         user=cookies.get('name')
         else
         user="inCart"
-        console.log(user)
+      
   
         return (dispatch) => {
             return axios.get('http://localhost:8089/'+user)
                 .then(response => {
-                    console.log("my history response" + JSON.stringify(response.data))
+                  
                     dispatch(historyData(response.data))
                 })
                 .catch(error => {

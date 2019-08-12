@@ -1,0 +1,32 @@
+/* #mycart{
+padding: 20px 0;
+font-size: 12px;
+} */
+$theme-color: #16A085;
+#total-div
+{
+margin-top: 40px;
+   background:$theme-color;
+   padding: 10px
+}
+
+#subtotal-div
+{
+    border-top: 1px solid #ddd;
+    margin-top: 10px
+}
+.img-top
+{
+    height:150px;
+    width:200px
+}
+#checkout
+{
+    margin:20px;
+    color:white;
+    background: grey
+}
+#myTotal
+{
+    text-align: center
+}

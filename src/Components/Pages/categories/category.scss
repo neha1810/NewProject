@@ -1,0 +1,21 @@
+$theme-color: #16A085;
+.prodFont
+{
+  font-family: "Times New Roman", Times, serif;
+ 
+}
+.prodButton
+{
+  background: $theme-color;
+  color: white;
+  width:100px;
+  height:30px;
+  border:none;
+  border-radius:2px;
+
+  
+}
+#my-filter
+{
+    text-align: center;
+}

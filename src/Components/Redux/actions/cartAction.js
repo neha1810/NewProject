@@ -4,9 +4,9 @@ import axios from 'axios';
 
 //fetch details in cart according to user data
 export const fetchCart = (data) => {
-    console.log("in fetch" + JSON.stringify(data))
+
     return {
-        type: 'gotCart',
+        type: 'GOT_CART',
         data
     }
 };
@@ -15,28 +15,8 @@ export const fetchCart = (data) => {
 
 
 export const fetchCartData = (name) => {
-//     console.log("for cart")
-//     console.log(name)
-//     var params = new URLSearchParams();
-   
-//     if(name===undefined || name==="")
-//     {
-       
-//         params.append("userId", "");
-       
-//     }
-//   else{
-//     params.append("userId",name);
 
-//     }
 
-  
-//     var request = {
-//         params: params
-//     };
-//     return (dispatch) => {
-//         return axios.get(`http://localhost:8089/inCart`,request)
-console.log("in submit after putting in add to cart action")
 
 
 var user=""
@@ -60,15 +40,15 @@ return (dispatch) => {
 
 //posting from cart
 export const postCart = (data) => {
-    console.log("in fetch" + JSON.stringify(data))
+
     return {
-        type: 'postCart',
+        type: 'POST_CART',
         data
     }
 };
 
 export const postCartData = (data) => {
- console.log(data)
+
     return (dispatch) => {
         return axios.post(`http://localhost:8089/postCart/`,data)
             .then(response => {

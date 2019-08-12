@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-//product page data
+//product page data and detail
 export const fetchProduct = (data,event) => {
-    console.log("in fetch" + JSON.stringify(data))
+
     return {
-        type: 'gotproduct',
+        type: 'GOT_PRODUCT',
         data,
         event
     }
@@ -14,13 +14,12 @@ export const fetchProduct = (data,event) => {
 
 
 export const fetchProductData = (event,arr) => {
-  console.log(event)
-  console.log(arr)
+ 
     var params = new URLSearchParams();
-    console.log("hey in check")
+ 
     if(arr===undefined || arr.length===0)
     {
-        console.log("hey in check")
+        
         params.append("category", event);
        
     }
@@ -37,7 +36,7 @@ export const fetchProductData = (event,arr) => {
     return (dispatch) => {
         return axios.get(`http://localhost:8089/poducts`, request)
             .then(response => {
-                console.log("in response" + JSON.stringify(response.data))
+              
                 dispatch(fetchProduct(response.data,event))
             })
             .catch(error => {
@@ -51,9 +50,9 @@ export const fetchProductData = (event,arr) => {
 
 //give the data according to product page detail button click
 export const detail = (data) => {
-    console.log("in detail" + JSON.stringify(data))
+ 
     return {
-        type: 'detail',
+        type: 'DETAIL',
         data
     }
 };
@@ -66,7 +65,7 @@ export const getDetails = (id) => {
     return (dispatch) => {
         return axios.get(`http://localhost:8089/poducts/`+id)
             .then(response => {
-                console.log("in response" + JSON.stringify(response.data))
+    
                 dispatch(detail(response.data))
             })
             .catch(error => {
@@ -81,9 +80,9 @@ export const getDetails = (id) => {
 export const sortBy = (list) => {
    
 
-    console.log("i am in sort")
+   
         return {
-            type: 'sort',
+            type: 'SORT',
             list
     
     

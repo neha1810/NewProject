@@ -1,29 +1,22 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
-
-import Login from './Components/Pages/Login'
-
-import Products from './Components/Pages/Products'
-
-// import Home from './Components/Molecules/Home'
-import HomePage from './Components/Pages/homeProducts'
-import Checkout from './Components/Molecules/Checkout'
-import Detail from './Components/Pages/Detail'
-import Nav from './Components/Molecules/Nav'
-import NavBar from './Components/Organisms/NavBar'
-import AddProduct from './Components/Pages/AddProduct'
-import ProductList from './Components/Pages/ProductList'
-import Header from './Components/Organisms/Header'
-import './App.css';
-import Footer from './Components/Organisms/Footer'
-// import AddProduct from './Components/Pages/AddProduct'
-// import FrontPage from './Components/Pages/frontPage'
-// import AddBalance from './Components/Pages/addBalance'
-import './App.css';
+import Login from './Components/Pages/login/login'
+import Products from './Components/Pages/categories/categoryEcommerce'
+import Home from './Components/Pages/home/home'
+import Checkout from './Components/Pages/checkout/checkout'
+import Detail from './Components/Pages/detail/detail'
+import AddProduct from './Components/Pages/admin/addProduct'
+import ProductList from './Components/Pages/cart/cartList'
 import Cookies from 'universal-cookie';
-import homePage from './Components/Pages/homeProducts';
-import History from './Components/Pages/History'
-import categoryEntertainment from './Components/Pages/categoryEntertainment';
+import Register from './Components/Pages/register/register'
+import History from './Components/Pages/history/history'
+import CategoryEntertainment from './Components/Pages/categories/categoryEntertainment';
+import history from './Components/Organisms/history'
+import CategoryTravel from './Components/Pages/categories/categoryTravel'
+import CategoryHealth from './Components/Pages/categories/categoryHealth'
+import CategoryFood from './Components/Pages/categories/categoryFood'
+import './App.css';
+
 
 const cookies = new Cookies();
 
@@ -31,29 +24,25 @@ class App extends React.Component {
   render() {
     return (
 
-      <Router>
+      <Router history={history}>
         <div className="App">
-          {/* <AddProduct/> */}
-         {/* <FrontPage/>
-          <AddBalance/> */}
-          <Header/>
-          {/* <Nav /> */}
-            {/* <NavBar/> */}
-          {/* <homePage/>
-         
-          <Header/> */}
+        
           <Switch>
-            <Route exact path='/' component={HomePage}></Route>
-            <Route exact path='/Login' component={Login}></Route>
-            <Route exact path='/products' component={Products}></Route>
-            <Route exact path='/cart' component={ProductList}></Route>
-            <Route exact path='/detail' component={Detail}></Route>
-            <Route exact path='/History' component={History}></Route>
-            <Route exact path='/AddProduct' component={AddProduct}></Route>
-            <Route exact path='/entertainment' component={categoryEntertainment}></Route>
+            <Route exact path='/' component={Home}></Route>
+           
+            <Route  path='/Login' component={Login}></Route>
+            <Route  path='/products' component={Products}></Route>
+            <Route  path='/cart' component={ProductList}></Route>
+            <Route  path='/detail' component={Detail}></Route>
+            <Route  path='/History' component={History}></Route>
+            <Route  path='/AddProduct' component={AddProduct}></Route>
+            <Route  path='/register' render={() => (!(cookies.get('name')) ? (<Register />) : (<Redirect to='/' />))}></Route>
+            <Route  path='/entertainment' component={CategoryEntertainment}></Route>
+            <Route  path='/travel' component={CategoryTravel}></Route>
+            <Route  path='/Health' component={CategoryHealth}></Route>
+            <Route  path='/Food' component={CategoryFood}></Route>
 
-
-            <Route exact path='/checkout' render={() => (cookies.get('name') ? (<Checkout />) : (<Redirect to='/Login' />))}></Route>
+            <Route  path='/checkout' render={() => (cookies.get('name') ? (<Checkout />) : (<Redirect to='/Login' />))}></Route>
 
           </Switch>
           
