@@ -15,8 +15,8 @@ import history from './Components/Organisms/history'
 import CategoryTravel from './Components/Pages/categories/categoryTravel'
 import CategoryHealth from './Components/Pages/categories/categoryHealth'
 import CategoryFood from './Components/Pages/categories/categoryFood'
-import './App.css';
 import AddBalance from './Components/Pages/addBalance/addBalance'
+import './App.css';
 
 const cookies = new Cookies();
 

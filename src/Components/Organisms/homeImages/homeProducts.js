@@ -4,7 +4,9 @@ import Button from '../../Atoms/Button'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {posthomePageData} from '../../Redux/actions/homeProductsActions'
-import './homeProducts.css'
+import './homeProducts.scss'
+import Category from '../displayCategory'
+import {detailsGet} from '../../Redux/actions/homeProductsActions'
 
 class HomeProducts extends Component {
     handleGoToDetails = (id) => {

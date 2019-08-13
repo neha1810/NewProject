@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Footer.css'
+import './Footer.scss'
 import payment from '../../../Components/Images/payment.png'
 
 class footer extends Component {

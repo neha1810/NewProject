@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './addBalance.css'
+import './addBalance.scss'
 import axios from 'axios';
 
 class addBalance extends Component {
