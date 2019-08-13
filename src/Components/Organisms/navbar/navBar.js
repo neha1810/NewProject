@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './NavBar.css'
+import './NavBar.scss'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchProductData } from '../../Redux/actions/productAction'

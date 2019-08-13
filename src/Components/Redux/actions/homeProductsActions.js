@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 
-
 export const gethomePageData = (data) =>{
   
     
@@ -26,17 +25,17 @@ export const posthomePageData = () => {
     };
 };
 
-// export const getDetails = (id) => {
+export const detailsGet = (id) => {
  
-//     return (dispatch) => {
-//         return axios.get(`http://localhost:8089/products/`+id)
-//             .then(response => {
-//                 console.log(id,"ProductID")
-//                 dispatch(gethomePageData(response.data))
-//             })
-//             .catch(error => {
-//                 throw (error);
-//             });
-//     };
-// };
+    return (dispatch) => {
+        return axios.get(`http://localhost:8089/poducts/`+id)
+            .then(response => {
+                console.log(id,"id")
+                dispatch(gethomePageData(response.data))
+            })
+            .catch(error => {
+                throw (error);
+            });
+    };
+};
 

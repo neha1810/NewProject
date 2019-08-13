@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 import NavDropdown from '../header/NavDropdown'
 import cart from '../../Images/cart.png';
 
-import './Header.css'
+import './Header.scss'
 
 
 

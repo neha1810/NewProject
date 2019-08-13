@@ -4,18 +4,18 @@ import banner from '../../../Components/Images/banner.jpg'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {posthomePageData} from '../../Redux/actions/homeProductsActions'
-import './homeProducts.css'
+import './homeProducts.scss'
 import Button from '../../Atoms/Button'
 import Category from '../displayCategory'
-import {getDetails} from '../../Redux/actions/homeProductsActions'
+import {detailsGet} from '../../Redux/actions/homeProductsActions'
 
 class HomeProducts extends Component {
     
-    // handleGoToDetails = (id) => {
-    //     console.log(id)
-    //     this.props.dispatch(getDetails(id));
+    handleGoToDetails = (id) => {
+        console.log(id)
+        // this.props(detailsGet(id));
     
-    //   }
+      }
 
     render() {
         return (
@@ -55,8 +55,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         // dispatching actions returned by action creators
-        posthomePageData: dispatch(posthomePageData())    
-
+        posthomePageData: dispatch(posthomePageData()) ,   
+        // detailsGet : event (id) => dispatch(detailsGet(id))
 
     }
 }
