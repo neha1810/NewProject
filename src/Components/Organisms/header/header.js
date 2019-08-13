@@ -17,10 +17,7 @@ const cookies = new Cookies();
 
 class Header extends Component {
     
-  clean = () => {
-    cookies.remove('name', { path: '/' })
-    cookies.remove('role', { path: '/' })
-}
+
   
     render() {
         console.log(this.props.message)
@@ -28,15 +25,15 @@ class Header extends Component {
             <div>
                 <div className="topDiv col-xs-8 col-sm-5 col-md-0">
                     <div className="signIn-header collapse navbar-collapse " id="navbarSupportedContent">
-                    <NavDropdown name="Hello, SignIN" id="dropDown">
+                    {/* <NavDropdown name="Hello, SignIN" id="dropDown">
                         
-                        <Link to="/register" name="register" onClick={this.linkRegisterClicked}  ><p className="myDrop">Create Account</p></Link>
-                        <Link to="/Login"><span>{this.props.message}</span></Link>
-                        <Link to="/AddProduct"><span>{this.props.role}</span></Link>
-                        <Link to="/" onClick={this.clean}><span>{this.props.log}</span></Link>
+                        <Link to="/register" name="register" onClick={this.linkRegisterClicked}><p className="myDrop">Create Account</p></Link>
+                        <Link to="/Login"><p>{this.props.message}</p></Link>
+                        <Link to="/AddProduct"><p>{this.props.role}</p></Link>
+                        <Link to="/" onClick={this.clean}><p>{this.props.log}</p></Link>
                         <Link to="/addBalance" className="myNav" id="addBalance"><p>AddBalance!</p></Link> 
                         
-                    </NavDropdown>
+                    </NavDropdown> */}
                 
                     <Link to="/cart"><img src={cart} alt="cart" /></Link>
 
@@ -53,16 +50,15 @@ class Header extends Component {
                             <h1>Yoyo App</h1>
                             <div className="search">
                                 <TextField type="text" placeholder="Search.." className="search" />
-                                <Link to="/"  className="myNav">Home</Link>
+                                {/* <Link to="/"  className="myNav">Home</Link> */}
                             </div>
                         
                         
            
                         </nav>
                         <br/>
-                        <br/>
-                        <br/>
-                        <NavBar/>
+                       
+                        <NavBar message={this.props.message} role={this.props.role} log={this.props.log}/>
                  
                        
 

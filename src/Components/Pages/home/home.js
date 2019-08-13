@@ -22,7 +22,7 @@ class Home extends React.Component {
             console.log("hey")
             message ="SignIn";
             log=""
-            role = cookies.get('role')
+            role = ""
         }
         else {
             if (!cookies.get('name')) {
