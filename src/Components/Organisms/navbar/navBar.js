@@ -26,11 +26,9 @@ const cookies = new Cookies();
 
 
 
+
 class navBar extends React.Component {
-  clean = () => {
-    cookies.remove('name', { path: '/' })
-    cookies.remove('role', { path: '/' })
-}
+
   linkClicked = event => {
 
 
@@ -44,6 +42,8 @@ class navBar extends React.Component {
 
 
   render() {
+    
+    
     return (
       <nav className="navbar navbar-expand-lg " id="navBar">
         {/* <a className="navbar-brand " href="/"></a> */}
@@ -65,16 +65,10 @@ class navBar extends React.Component {
             <NavItem path="/page3" name="Food and beverages"  /> */}
 
             <Link to="/History" name="history" onClick={this.linkHistoryClicked} className="myNav" >History</Link>
-            <Link to="/"  className="myNav">Home</Link>
-            <Link to="/cart"><img src={cart} alt="cart" /></Link>
             
-            <NavDropdown name="Hello, SignIN" id="dropDown">
-                        
-                        <Link to="/register" name="register" onClick={this.linkRegisterClicked}  ><p>Create Account</p></Link>
-                        <Link to="/Login"><span>SignIn</span></Link>
-                        <Link to="/" onClick={this.clean}><span>       LogOut</span></Link>
-                        
-                    </NavDropdown>
+            
+            
+         
             {/* <Link to="/register" name="register" onClick={this.linkRegisterClicked} className="myNav" >Register</Link> */}
           </ul>
 

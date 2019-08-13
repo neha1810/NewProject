@@ -1,10 +1,11 @@
 import React from 'react'
 import Cookies from 'universal-cookie';
-import { Link } from 'react-router-dom'
 import Header from '../../Organisms/header/header'
 import HomeProducts from '../../Organisms/homeImages/homeProducts'
 import Footer from '../../Organisms/footer/footer'
 import Share from '../../Molecules/share/share'
+
+
 
 const cookies = new Cookies();
 class Home extends React.Component {
@@ -16,20 +17,24 @@ class Home extends React.Component {
 
         let message;
         let role;
+        let log;
         if ((this.props.location.state && this.props.location.state.username && this.props.location.state.role) === undefined) {
-
-
-            message = cookies.get('name')
+            console.log("hey")
+            message ="SignIn";
+            log=""
             role = cookies.get('role')
         }
         else {
             if (!cookies.get('name')) {
-
-                message = "";
+                console.log("hey1")
+                message ="SignIn";
+                log=""
                 role = ""
             }
             else {
+                console.log("hey2")
                 message = this.props.location.state.username
+                log="LogOut"
                 if (this.props.location.state.role === "admin")
                     role = this.props.location.state.role
 
@@ -37,14 +42,15 @@ class Home extends React.Component {
 
 
         }
+        console.log(message)
 
         return (
 
 
             <div>
-                <Header />
-                <p>{message}</p>
-                <Link to="/AddProduct"><p>{role}</p></Link>
+                <Header message={message} role={role} log={log}/>
+               
+              
                 <HomeProducts />
                 <Share/>
       

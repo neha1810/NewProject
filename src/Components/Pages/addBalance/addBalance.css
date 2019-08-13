@@ -1,0 +1,12 @@
+.a-button-input{
+    background-color: transparent;   
+    border: 0;
+    cursor: pointer;
+    z-index: 20;    
+}
+.div{    
+    text-align: center; 
+}
+.amount-div{
+    margin-left: 10%;
+}

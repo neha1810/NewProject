@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import banner from '../../../Components/Images/banner.jpg'
-
-
+import Button from '../../Atoms/Button'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {posthomePageData} from '../../Redux/actions/homeProductsActions'
 import './homeProducts.css'
 
 class HomeProducts extends Component {
-   
+    handleGoToDetails = (id) => {
+        console.log(id)
+        // this.props(detailsGet(id));
+        
+        }
 
     render() {
         return (
@@ -24,8 +28,9 @@ class HomeProducts extends Component {
                             </div>
                             <div className="details">
                                 <h2>{item.name}</h2>
-                                <h3>{item.description}</h3>
+                                
                                 <h3 className="price"> {item.price}</h3>
+                                <Link to="/detail"><Button className="btn btn-primary" value="Go to Details" onClick={this.handleGoToDetails(item.id)} /></Link>
                             </div>
                         </div>
                     )}
@@ -47,7 +52,7 @@ const mapDispatchToProps = dispatch => {
     return {
         // dispatching actions returned by action creators
         posthomePageData: dispatch(posthomePageData())
-     
+        // detailsGet : event (id) => dispatch(detailsGet(id))
 
 
     }

@@ -134,7 +134,7 @@ class Detail extends React.Component {
                                                 <Image
                                                     className={"d-block w-100"}
                                                     src={this.props.image}
-
+                                                    id="image-car3"
                                                     alt={"Third slide"}
                                                 />
                                                 <Carousel.Caption>
@@ -143,7 +143,8 @@ class Detail extends React.Component {
                                             </Carousel.Item>
                                             <Carousel.Item>
                                                 <Image
-                                                    className={"d-block w-100"}
+                                                    className={"d-block w-100 "}
+                                                    id="image-car1"
                                                     src={this.props.image}
 
                                                     alt={"Third slide"}
@@ -155,7 +156,8 @@ class Detail extends React.Component {
                                             </Carousel.Item>
                                             <Carousel.Item>
                                                 <Image
-                                                    className={"d-block w-100"}
+                                                    className={"d-block w-100 image-car"}
+                                                    id="image-car2"
                                                     src={this.props.image}
 
                                                     alt={"Third slide"}

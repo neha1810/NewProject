@@ -23,15 +23,7 @@ const cookies = new Cookies();
 class Login extends React.Component {
 
 
-  responseGoogleError = (response) => {
-   
-    //   if(typeof(response)==WE){}
-    if (response)
-    {
-
-    }
-     
-  }
+ 
 
   handleClose = (event) => {
     this.props.dispatch(closePopup(event));
