@@ -25,8 +25,7 @@ const DetailsReducer = (state, action) => {
             else
             state.dataDetail.userId=""
             
-            console.log(" detail reducer")
-            console.log(state.dataDetail)
+          
             return { ...state }
         default: return state
     }

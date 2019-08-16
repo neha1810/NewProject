@@ -3,7 +3,7 @@ import { FacebookShareButton, LinkedinShareButton, WhatsappShareButton, TwitterS
 import { FacebookIcon, LinkedinIcon, WhatsappIcon, TwitterIcon } from 'react-share'
 import './Share.scss'
 
-class share extends Component {
+class Share extends Component {
     render() {
         return (
             <div className="share">
@@ -26,5 +26,5 @@ class share extends Component {
         )
     }
 }
-export default share;
+export default Share;
 

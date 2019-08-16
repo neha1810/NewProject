@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow } from 'enzyme';
-import Image from '../Image';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import Image from '../Image';
 
 configure({ adapter: new Adapter() });
 

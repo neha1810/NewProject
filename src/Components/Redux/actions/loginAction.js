@@ -2,30 +2,44 @@ import axios from 'axios';
 //for login
 //close pop
 export const closePopup = () => {
-   
 
 
-        return {
-            type: 'CLOSE_POPUP',
-        
-    
-    
-        }
+
+    return {
+        type: 'CLOSE_POPUP',
+
+
+
     }
+}
+
+export const loginDetails = (user, role) => {
 
 
-    export const loginInput = (event) => {
+
+    return {
+        type: 'LOGIN_DETAILS',
+        user: user,
+        roleof: role
 
 
-        return {
-            type: 'LOGIN_TYPE',
-            name: event.target.name,
-            value: event.target.value
-    
-        }
+
     }
+}
 
-    
+
+export const loginInput = (event) => {
+
+
+    return {
+        type: 'LOGIN_TYPE',
+        name: event.target.name,
+        value: event.target.value
+
+    }
+}
+
+
 //to check whether user present or not
 export const fetchData = (data) => {
 
@@ -40,7 +54,7 @@ export const loginSubmit = () => {
     return (dispatch) => {
         return axios.get(`http://localhost:8089/users`)
             .then(response => {
-           
+
                 dispatch(fetchData(response.data))
             })
             .catch(error => {

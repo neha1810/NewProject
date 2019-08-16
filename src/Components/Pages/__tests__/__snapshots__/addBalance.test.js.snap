@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddBalance input 1`] = `ShallowWrapper {}`;
+
+exports[`AddBalance input 2`] = `ShallowWrapper {}`;
+
+exports[`AddBalance input 3`] = `ShallowWrapper {}`;
+
+exports[`AddBalance input 4`] = `ShallowWrapper {}`;
+
+exports[`AddBalance render the AddBalance component 1`] = `ShallowWrapper {}`;

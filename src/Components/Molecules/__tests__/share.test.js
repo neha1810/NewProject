@@ -1,28 +1,27 @@
 import React from 'react';
-import Footer from './Footer';
 import {shallow} from 'enzyme';
-// setup file
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import Share from '../share/share';
 
 configure({ adapter: new Adapter() });
 
-describe('Footer', () => {
+describe('Share', () => {
 let wrapper;
 beforeEach(()=> {
 wrapper = shallow(
-        <Footer />
+        <Share />
     )
 })
 
 
-it('render the Footer component', () => {
+it('render the Share component', () => {
     expect(wrapper).toMatchSnapshot();
 });
-it('Button exists',()=> {
-    //wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('#Footer')).toBeDefined();
-})
+// it('Button exists',()=> {
+//     //wrapper.find('button').at(1).simulate('click');
+//     expect(wrapper.find('#Share')).toBeDefined();
+// })
 
 
 

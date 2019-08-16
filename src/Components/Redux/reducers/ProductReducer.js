@@ -13,7 +13,7 @@ export default function productReducer(state = [], action) {
     switch (action.type) {
 
         case 'GOT_PRODUCT':
-            console.log(initialState)
+        
             state.productList = action.data
 
             state.category = action.event

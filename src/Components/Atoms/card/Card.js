@@ -20,7 +20,7 @@ class Card extends React.Component {
           <h5 className="card-title">{this.props.name}</h5>
           <p className="card-text">{this.props.description}</p>
           <p>₹{this.props.price}</p>
-          <Link to="/detail" >    <Button className="btn btn-primary" value="Go to Details" onClick={this.handleGoToDetails} /></Link>
+          <Link to="/detail" >    <Button id="cardbutton" className="btn btn-primary" value=" Details" onClick={this.handleGoToDetails} /></Link>
 
         </div>
       </div>

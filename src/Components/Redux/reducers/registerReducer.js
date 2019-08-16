@@ -30,7 +30,7 @@ const registerReducer = (state = initialState, action) => {
 
 
         case 'REGISTER_SUBMIT':
-            console.log(state.open)
+           
           
             if (!state.username) {
                 state.usernameError = "Name cannot be empty";

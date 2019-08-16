@@ -11,9 +11,14 @@ const initialState =
     hasUser: false,
     google: "",
     googleLog: false,
-    passwordError:"",
-    usernameError:"",
-    open:false
+    passwordError: "",
+    usernameError: "",
+    open: false,
+    roleof: (cookies.get('role') ? cookies.get('role') : ""),
+    user: (cookies.get('name') ? cookies.get('name') : "SignIn"),
+    log: (cookies.get('name') ? "Log Out" : ""),
+    balance: (cookies.get('name') ? "Add Balance" : ""),
+    create: (cookies.get('name') ? "" : "create account"),
 
 }
 
@@ -21,30 +26,63 @@ const LoginReducer = (state = initialState, action) => {
     if (typeof state === 'undefined') {
         return initialState
     }
+    if (action.roleof === 'user')
+        action.roleof = ""
 
     switch (action.type) {
 
         case 'LOGIN_TYPE':
-            state.usernameError=""
-            state.passwordError=""
+            state.usernameError = ""
+            state.passwordError = ""
             return { ...state, [action.name]: action.value }
 
 
+        case 'LOGIN_DETAILS':
+            if (cookies.get('name')) {
+                state.user = action.user
+                state.roleof = action.roleof
+                state.log = "Log Out"
+                state.balance = "Add Balance"
+                state.create = ""
+            }
+            else {
+                state.user = "SignIn"
+                state.roleof = ""
+                state.log = ""
+                state.balance = ""
+                state.create = "create account"
+
+            }
+            return { ...state }
+
+
         case 'LOGIN_SUBMIT':
-   
+            let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+
             if (!state.username) {
                 state.usernameError = "Name cannot be empty";
-                state.open=true
+                state.open = true
             }
             else
-            state.usernameError=""
+                state.usernameError = ""
+
+            if (state.username !== re && state.usernameError ) {
+
+                state.usernameError = "enter valid email";
+
+
+            }
+            else
+                state.usernameError = ""
 
             if (!state.password) {
                 state.passwordError = "Password cannot be empty";
-                state.open=true
+                state.open = true
             }
             else
-            state.passwordError=""
+                state.passwordError = ""
 
 
             for (var i = 0; i < action.data.length; i++) {
@@ -65,12 +103,12 @@ const LoginReducer = (state = initialState, action) => {
             }
 
 
-            state.password=""
-            state.username=""
-           
-            console.log(state.usernameError)
+            state.password = ""
+            state.username = ""
 
-            return {...state}
+
+
+            return { ...state }
 
         case 'GOOGLE_SUBMIT':
             state.google = action.data;
@@ -81,7 +119,7 @@ const LoginReducer = (state = initialState, action) => {
 
             return { ...state }
         case 'CLOSE_POPUP':
-            state.open=false
+            state.open = false
             return { ...state }
 
         default: return state

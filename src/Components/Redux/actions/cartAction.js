@@ -19,16 +19,16 @@ export const fetchCartData = (name) => {
 
 
 
-var user=""
-if(name)
-user=name
-else
-user="inCart"
-console.log(user)
-return (dispatch) => {
-    return axios.get('http://localhost:8089/'+user)
+    var user = ""
+    if (name)
+        user = name
+    else
+        user = "inCart"
+
+    return (dispatch) => {
+        return axios.get('http://localhost:8089/' + user)
             .then(response => {
-                console.log("in response" + JSON.stringify(response.data))
+
                 dispatch(fetchCart(response.data))
             })
             .catch(error => {
@@ -50,9 +50,9 @@ export const postCart = (data) => {
 export const postCartData = (data) => {
 
     return (dispatch) => {
-        return axios.post(`http://localhost:8089/postCart/`,data)
+        return axios.post(`http://localhost:8089/postCart/`, data)
             .then(response => {
-                console.log("in response" + JSON.stringify(response.data))
+
                 dispatch(postCart(response.data))
             })
             .catch(error => {

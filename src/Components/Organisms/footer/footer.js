@@ -5,7 +5,7 @@ import payment from '../../../Components/Images/payment.png'
 class footer extends Component {
     render() {
         return (
-            <footer>
+            <footer id="myfooter">
                 <div className="container-fuild col-xs-12 col-sm-12 col-md-12">
                     <div className="row text-center text-xs-center text-sm-left text-md-left">
                         <div className="col-xs-12 col-sm-4 col-md-4">

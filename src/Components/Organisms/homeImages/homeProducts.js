@@ -1,44 +1,48 @@
 import React, { Component } from 'react'
-import banner from '../../../Components/Images/banner.jpg'
-import Button from '../../Atoms/Button'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import {posthomePageData} from '../../Redux/actions/homeProductsActions'
+import { getDetailsHome } from '../../Redux/actions/homeImageAction'
+import Card from '../../Atoms/card/Card'
 import './homeProducts.scss'
-import Category from '../displayCategory'
-import {detailsGet} from '../../Redux/actions/homeProductsActions'
 
 class HomeProducts extends Component {
-    handleGoToDetails = (id) => {
-        console.log(id)
-        // this.props(detailsGet(id));
-        
-        }
+
 
     render() {
+        if (this.props.data[0] === undefined)
+            return null
         return (
-            <fieldset>
-                <div className="banner ">
-                    <img className="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="banner" src={banner} alt="HPD_Friendshipday_1" />
-                </div>
-               
-                <div>
-                    {this.props.homePageReducer.map(item =>
-                        <div className="col-xs-12 col-sm-4 col-md-4 div" key={item.id}>
-                            <div className="element-div" >
-                                <img src={`../Images/${item.image}.jpg`} alt="Gift Card" />
-                            </div>
-                            <div className="details">
-                                <h2>{item.name}</h2>
-                                
-                                <h3 className="price"> {item.price}</h3>
-                                <Link to="/detail"><Button className="btn btn-primary" value="Go to Details" onClick={this.handleGoToDetails(item.id)} /></Link>
-                            </div>
+
+            <React.Fragment>
+                <div className="container">
+                    <div className="row">
+
+                    </div>
+                    <div className="row">
+
+                        <div className=" col-md-3 col-sm-6 col-xs-6 col-lg-3 pt-5" id="categories">
+                            <Card productId={this.props.data[0].id} name={this.props.data[0].name} src={this.props.data[0].image} description={this.props.data[0].description} price={this.props.data[0].price} />
+                            <Card productId={this.props.data[3].id} name={this.props.data[3].name} src={this.props.data[3].image} description={this.props.data[3].description} price={this.props.data[3].price} />
+
                         </div>
-                    )}
+
+                        <div className="col-md-3 col-sm-6 col-xs-6 col-lg-3 pt-5">
+                            <Card productId={this.props.data[1].id} name={this.props.data[1].name} src={this.props.data[1].image} description={this.props.data[1].description} price={this.props.data[1].price} />
+                            <Card productId={this.props.data[4].id} name={this.props.data[4].name} src={this.props.data[4].image} description={this.props.data[4].description} price={this.props.data[4].price} />
+                        </div>
+
+                        <div className=" col-md-3 col-sm-6 col-xs-6 col-lg-3 pt-5">
+                            <Card productId={this.props.data[2].id} name={this.props.data[2].name} src={this.props.data[2].image} description={this.props.data[2].description} price={this.props.data[2].price} />
+                            <Card productId={this.props.data[5].id} name={this.props.data[5].name} src={this.props.data[5].image} description={this.props.data[5].description} price={this.props.data[5].price} />
+                        </div>
+                        <div className=" col-md-3 col-sm-6 col-xs-6 col-lg-3 pt-5">
+                            <Card productId={this.props.data[2].id} name={this.props.data[2].name} src={this.props.data[2].image} description={this.props.data[2].description} price={this.props.data[2].price} />
+                            <Card productId={this.props.data[5].id} name={this.props.data[5].name} src={this.props.data[5].image} description={this.props.data[5].description} price={this.props.data[5].price} />
+                        </div>
+
+                    </div>
                 </div>
-              
-            </fieldset>
+            </React.Fragment>
+
         )
     }
 }
@@ -46,15 +50,15 @@ const mapStateToProps = state => {
     console.log("my home")
     console.log(state.homePageReducer)
     return {
-        homePageReducer: state.homePageReducer
+        data: state.homePageReducer
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        // dispatching actions returned by action creators
-        posthomePageData: dispatch(posthomePageData())
-        // detailsGet : event (id) => dispatch(detailsGet(id))
+
+        PageData: dispatch(getDetailsHome()),
+
 
 
     }

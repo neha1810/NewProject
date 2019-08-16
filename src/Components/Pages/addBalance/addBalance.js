@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import './addBalance.scss'
 import axios from 'axios';
+import './addBalance.scss'
+
 
 class addBalance extends Component {
     constructor(props) {
@@ -29,7 +30,9 @@ class addBalance extends Component {
         const balance = {
             balance: this.state.amount
         }
-        axios.post(`http://localhost:8089/users`, { balance })
+
+  
+        axios.post(`http://localhost:8089/users`, balance)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -41,10 +44,10 @@ class addBalance extends Component {
     render() {
         return (
             <div className="outer-div">
-                <form  onSubmit={this.handleSubmitBalance}>
+                <form onSubmit={this.handleSubmitBalance}>
                     <div className="div">
                         <div className="addBalance-div">
-                            <label>Add Balance: </label>
+                            <label id="balancelabel">Add Balance: </label>
                             <input name="amount" type="text" onChange={this.handleChange} value={this.state.amount}></input>
                         </div>
                         <div className="amount-div">

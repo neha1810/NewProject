@@ -15,7 +15,7 @@ import {closePopup} from  '../../Redux/actions/loginAction'
 import { loginInput } from '../../Redux/actions/loginAction'
 import { loginSubmit } from '../../Redux/actions/loginAction';
 import { googleSubmit } from '../../Redux/actions/loginAction';
-import Header from '../../Organisms/header/header'
+import {loginDetails}  from '../../Redux/actions/loginAction'
 import './login.scss'
 
 const cookies = new Cookies();
@@ -49,13 +49,12 @@ class Login extends React.Component {
   }
 
   render() {
+   
     if (cookies.get('name')) {
+      this.props.dispatch(loginDetails(cookies.get('name'),cookies.get('role')))
       return <Redirect to={{
         pathname: '/',
-        state: {
-          username: cookies.get('name'),
-          role: cookies.get('role')
-        }
+     
       }}
       />
     }
@@ -63,11 +62,7 @@ class Login extends React.Component {
     return (
 
       <div className="container-fluid" id="my-login">
-            <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 pt-5">
-                            <Header />
-                        </div>
-                        </div>
+         
         <div className="row" id="login">
           <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 ">
             <div className="mylogin">
@@ -147,17 +142,9 @@ class Login extends React.Component {
 }
 function mapStatetoProps(state) {
   const{username,password,isLoggedIn,hasUser,google,googleLog,usernameError,passwordError,open} = state.logindata
-  console.log(state.pas)
+ 
   return {
-    // username: state.username,
-    // password: state.password,
-    // isLoggedIn: state.isLoggedIn,
-    // hasUser: state.hasUser,
-    // google: state.google,
-    // googleLog: state.googleLog,
-    // usernameError:state.usernameError,
-    // passwordError:state.passwordError,
-    // open:state.open
+ 
     username,
     password,
     isLoggedIn,

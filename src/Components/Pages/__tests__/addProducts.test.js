@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import AddProduct from '../admin/addProduct';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -14,31 +14,31 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 configure({ adapter: new Adapter() });
 
-describe('admin', () => {    
+describe('admin', () => {
     let wrapper;
-   beforeEach(() => {
-    wrapper = shallow(<Provider store={store}><AddProduct /></Provider>)                                
-  });
+    beforeEach(() => {
+        wrapper = shallow(<Provider store={store}><AddProduct /></Provider>)
+    });
     it('admin page rendered', () => {
         expect(wrapper).toBeDefined();
     });
-    it('button',()=>{
-         expect(wrapper.find('#admin-button')).toBeDefined();   
-     });
-     it('button',()=>{
-        expect(wrapper.find('#admin-button')).toBeDefined();   
+    it('button', () => {
+        expect(wrapper.find('#admin-button')).toBeDefined();
     });
-  
-    
-    it('input',()=>{
-        expect(wrapper.find('.input-text-admin')).toBeDefined();   
+    it('button', () => {
+        expect(wrapper.find('#admin-button')).toBeDefined();
     });
-    it('label',()=>{
-        expect(wrapper.find('.admin-label')).toBeDefined();   
+
+
+    it('input', () => {
+        expect(wrapper.find('.input-text-admin')).toBeDefined();
     });
-  
-    it('dialog',()=>{
-        expect(wrapper.find('.popup')).toBeDefined();   
+    it('label', () => {
+        expect(wrapper.find('.admin-label')).toBeDefined();
+    });
+
+    it('dialog', () => {
+        expect(wrapper.find('.popup')).toBeDefined();
     });
 
     // it('Comment Box rendered ...',()=>{

@@ -9,7 +9,6 @@ import DialogContent from '@material-ui/core/DialogActions';
 import Button from '../../Atoms/Button'
 import Input from '../../Atoms/Input'
 import Label from '../../Atoms/Label'
-import Header from '../../Organisms/header/header'
 import {registerInput} from '../../Redux/actions/registerAction'
 import {registerSubmit} from '../../Redux/actions/registerAction'
 import {closePopup} from '../../Redux/actions/registerAction'
@@ -58,11 +57,7 @@ class Register extends React.Component {
     return (
 
       <div className="container-fluid" id="my-register">
-            <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 pt-5">
-                            <Header />
-                        </div>
-                        </div>
+         
         <div className="row" id="register">
           <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 ">
             <div className="mylogin">
@@ -131,13 +126,7 @@ function mapStatetoProps(state) {
  
  const{name,username,password,nameError,usernameError, passwordError,open}= state.registerdata
   return {
-    // name:state.name,
-    // username: state.username,
-    // password: state.password,
-    // nameError:state.nameError,
-    // usernameError:state.usernameError,
-    // passwordError:state.passwordError,
-    // open:state.open
+ 
     name,
     username,
     password,

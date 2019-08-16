@@ -4,7 +4,7 @@ class Product extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantity: 1
+      quantity: 0
     };
 
 

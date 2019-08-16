@@ -44,16 +44,16 @@ export const submit = (productAdded) => {
 
 //close pop up admin
 export const closePopupAdmin = () => {
-   
 
-   
-        return {
-            type: 'CLOSE_POPUP_ADMIN',
-        
-    
-    
-        }
+
+
+    return {
+        type: 'CLOSE_POPUP_ADMIN',
+
+
+
     }
+}
 
 
 

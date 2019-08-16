@@ -11,7 +11,6 @@ import { closePopupAdmin } from '../../Redux/actions/adminAction'
 import Button from '../../Atoms/Button'
 import Input from '../../Atoms/Input'
 import Label from '../../Atoms/Label'
-import Header from '../../Organisms/header/header'
 import './adminAdd.scss'
 
 
@@ -31,13 +30,13 @@ class AddProduct extends React.Component {
     //validation
 
 
-    //valid true false and axios post
+
     handleSubmit = event => {
 
 
 
         const productAdded = this.props
-        console.log("in handle submit" + productAdded)
+      
         this.props.dispatch(submit(productAdded))
 
 
@@ -47,11 +46,11 @@ class AddProduct extends React.Component {
         return (
             <section className="flexbox" >
                 <div className="container-fluid">
-                <div className="row">
+                    {/* <div className="row">
                         <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 pt-5">
                             <Header />
                         </div>
-                        </div>
+                        </div> */}
                     <div className="row" id="admin">
                         <div className="admin-div col-md-3 col-sm-3 col-xs-12 col-lg-3" >
 
@@ -98,15 +97,15 @@ class AddProduct extends React.Component {
 
                             </div>
                             <div className="adminA">
-                                <Label for="giftCategory" className="admin-label" > <p className="text-admin">Gift Category</p></Label>
+                                <Label for="gift" className="admin-label" > <p className="text-admin">Gift </p></Label>
 
-                                <Input name="giftCategory" value={this.props.giftCategory} className="input-text-admin" onchange={event => this.props.dispatch(changeinput(event))}></Input>
-                                <p className="error">{this.props.giftcategoryError}</p>
+                                <Input name="gift" value={this.props.gift} className="input-text-admin" onchange={event => this.props.dispatch(changeinput(event))}></Input>
+                                <p className="error">{this.props.giftError}</p>
 
                             </div>
                             <Button className="admin-button" value="SUBMIT" onClick={this.handleSubmit} />
                             <Dialog
-                            id="popup"
+                                id="popup"
                                 open={this.props.open}
                                 onClose={this.handleClose}
                                 aria-labelledby="alert-dialog-title"
@@ -119,13 +118,13 @@ class AddProduct extends React.Component {
                                      </DialogContentText>
                                 </DialogContent>
                                 <DialogActions>
-                                    <Button onClick={this.handleClose} color="primary" value="okay" id="popupButton"/>
+                                    <Button onClick={this.handleClose} color="primary" value="okay" id="popupButton" />
 
 
                                 </DialogActions>
                             </Dialog>
                             <div></div>
-                            <Button className="admin-button" value="CLEAR" onClick={this.handleClear}  />
+                            <Button className="admin-button" value="CLEAR" onClick={this.handleClear} />
 
                         </div>
                         <div className="col-md-3 col-sm-3  col-xs-12 col-lg-3">
@@ -139,35 +138,23 @@ class AddProduct extends React.Component {
 
 }
 function mapStatetoProps(state) {
-    const{id,giftName,giftPrice,giftVendor,giftDiscount,giftCategory,giftidError,giftnameError,giftpriceError,giftdiscountError,giftvendorError,giftcategoryError,open} = state.addData
-  
+    const { id, giftName, giftPrice, giftVendor, giftDiscount, gift, giftidError, giftnameError, giftpriceError, giftdiscountError, giftvendorError, giftError, open } = state.addData
+
     return {
-        // id: state.id,
-        // giftName: state.giftName,
-        // giftPrice: state.giftPrice,
-        // giftVendor: state.giftVendor,
-        // giftDiscount: state.giftDiscount,
-        // giftCategory: state.giftCategory,
-        // giftidError: state.giftidError,
-        // giftnameError: state.giftnameError,
-        // giftpriceError: state.giftpriceError,
-        // giftdiscountError: state.giftdiscountError,
-        // giftvendorError: state.giftvendorError,
-        // giftcategoryError: state.giftcategoryError,
-        // open: state.open,
+
 
         id,
         giftName,
         giftPrice,
         giftVendor,
         giftDiscount,
-        giftCategory,
+        gift,
         giftidError,
         giftnameError,
         giftpriceError,
         giftdiscountError,
         giftvendorError,
-        giftcategoryError,
+        giftError,
         open
     }
 }

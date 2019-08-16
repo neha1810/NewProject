@@ -1,29 +1,30 @@
 import React from 'react';
-import Header from './Header';
+import Footer from '../footer/footer';
 import {shallow} from 'enzyme';
-// setup file
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-describe('Header', () => {
+describe('Footer', () => {
 let wrapper;
 beforeEach(()=> {
 wrapper = shallow(
-        <Header />
+        <Footer />
     )
 })
 
 
-it('render the Header component', () => {
+it('render the Footer component', () => {
     expect(wrapper).toMatchSnapshot();
 });
 it('Button exists',()=> {
     //wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('#Header')).toBeDefined();
+    expect(wrapper.find('#Footer')).toMatchSnapshot();
 })
-
+// it('includes link to Home scene', () => {                                       
+//     expect(wrapper.find(Link)).toBe('/');
+//    });
 
 
 })

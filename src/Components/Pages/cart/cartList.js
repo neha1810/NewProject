@@ -6,7 +6,6 @@ import { fetchCartData } from '../../Redux/actions/cartAction'
 import { postCartData } from '../../Redux/actions/cartAction'
 import Total from '../../Organisms/total'
 import Product from '../../Organisms/Product'
-import Header from '../../Organisms/header/header'
 import './cartList.scss'
 
 
@@ -29,8 +28,7 @@ class ProductList extends React.Component {
 
     }
     postCart = () => {
-        console.log("post cart")
-        console.log(this.props.cartlist)
+      
         this.props.postCart(this.props.cartlist);
     }
 
@@ -53,11 +51,7 @@ class ProductList extends React.Component {
         }
         return (
             <div class="container-fluid" id="mycart">
-                <div className="row">
-                    <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 pt-5" id="head">
-                        <Header />
-                    </div>
-                </div>
+
 
                 <div className="row">
                     <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 pt-5" id="myTotal">
